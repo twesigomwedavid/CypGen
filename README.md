@@ -1,2 +1,2 @@
-# asterigraph
-Graph-based Star Allele Calling from NGS Data
+# CypGen
+Leveraging genome graph-based variant detection for accurate genotyping of cytochrome P450 genes.
