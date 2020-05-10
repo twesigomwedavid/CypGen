@@ -1,0 +1,85 @@
+2020-04-17 12:08:42	6.6s	jovial_cantor	OK	0310a2e8c66fcfa464b0844da68c6c5d	0792bb6d-fd97-49d4-8a56-14d69cd80fbf	nextflow run asteri.nf -profile slurm
+2020-04-17 12:11:41	6.5s	chaotic_newton	OK	0310a2e8c66fcfa464b0844da68c6c5d	8d27eb2b-e459-4b22-b5cf-38b04ed0c39d	nextflow run asteri.nf -profile slurm
+2020-04-17 12:13:14	6.9s	modest_noether	OK	549de730337d833399b1071ee14e3160	a3673d88-862d-4ab8-b758-26bd42c63788	nextflow run asteri.nf -profile slurm
+2020-04-17 12:24:43	7.2s	boring_montalcini	OK	0be0ff52eba2bc3f38e6ee7da661af9a	77945f34-bd00-42c6-a7a0-32568699f11e	nextflow run asteri.nf -profile slurm
+2020-04-17 19:07:08	7.2s	modest_carson	OK	100b4d88e6a97c0d1e7e07ca29921a34	f2308f6f-5cf4-498d-8928-d069228dfac4	nextflow run asteri.nf -profile slurm
+2020-04-17 19:07:53	6.5s	gloomy_carlsson	OK	762f27ee2797dde7cf7ade17f9827cee	e9553d58-dd59-48c1-996d-27512e546339	nextflow run asteri.nf -profile slurm
+2020-04-17 19:09:06	-	distraught_almeida	-	30957db2c65f584db0b0abbf30fafa75	9f385e94-58eb-47d1-8f18-ead30f5d69f4	nextflow run asteri.nf -profile slurm
+2020-04-17 19:10:47	1.8s	amazing_lamarr	OK	54317c9a43f5d27f67989a76d4dbc01a	60485a66-8dad-499d-96fb-9c50dbd7a3a9	nextflow run asteri.nf -profile slurm
+2020-04-17 19:11:48	1.4s	desperate_cori	OK	4e002ad4b14c56deee32348de8053f10	33ae271e-25a9-42db-94c4-3b22454e317f	nextflow run asteri.nf -profile slurm
+2020-04-17 19:13:52	1.4s	awesome_davinci	OK	72ee89726f2a3a8407a7d2a31b11ea34	b88005b2-4753-4f27-baa7-b3c7d21c7462	nextflow run asteri.nf -profile slurm
+2020-04-17 19:15:06	1.4s	nasty_wing	OK	834dbc699940b9321bfd4943aea5bb9a	829f0b38-efc5-4630-b214-9fc70e9f3959	nextflow run asteri.nf -profile slurm
+2020-04-17 19:18:46	2.2s	furious_lorenz	OK	9c57503f589346389db7ef52f45191ea	8d081c50-f2d9-41e4-8825-9aa6f2f25ccf	nextflow run asteri.nf -profile slurm
+2020-04-17 19:19:51	-	special_saha	-	be7a0786ca73c988877130a643b7516d	c1a168e2-8f85-44f7-9f1f-eb4453f47d74	nextflow run asteri.nf -profile slurm
+2020-04-17 19:20:59	-	sad_einstein	-	be7a0786ca73c988877130a643b7516d	6e950d15-3c2e-4329-aedc-5ac330800555	nextflow run asteri.nf -profile slurm
+2020-04-17 19:23:57	1.8s	lonely_brenner	OK	14b07b7c2a2d552cef3046ed7d3f5cc1	86adbe4b-5986-4e4e-b699-4e82a65a3d24	nextflow run asteri.nf -profile slurm
+2020-04-17 19:24:34	1.7s	drunk_leakey	OK	693deda7d48b3a5a78ae0263724c328e	1d4ed5ad-b3e4-4c94-a31d-7d81b6abe4c9	nextflow run asteri.nf -profile slurm
+2020-04-17 19:26:49	1.6s	exotic_koch	OK	693deda7d48b3a5a78ae0263724c328e	42a4b558-e6d9-4679-bb90-dbef9e79c9ec	nextflow run asteri.nf -profile slurm
+2020-04-17 19:28:51	1.4s	hungry_stallman	OK	693deda7d48b3a5a78ae0263724c328e	ddf7bfaa-dd85-4033-9635-3b7bec417a65	nextflow run asteri.nf -profile slurm
+2020-04-17 19:30:52	1.8s	naughty_jang	OK	8a5de8626acafc1d9f4ae1f602ecdf6a	940f9cb7-c885-4529-a00f-80716772740c	nextflow run asteri.nf -profile slurm
+2020-04-17 19:35:34	2.8s	cheesy_lalande	ERR	999a5809aba05818ea1690bf8ef7a92b	c4ead7b2-d990-4d90-8b90-dd74ab698649	nextflow run asteri.nf -profile slurm
+2020-04-17 19:36:44	36.5s	pensive_knuth	OK	6e591ebe5440705b56e8a26835414090	28d15157-d905-4802-9a8f-11c95471c2ad	nextflow run asteri.nf -profile slurm
+2020-04-18 13:04:08	-	magical_mandelbrot	-	c1c8abdefd6945cc4627a5c63b677d9e	492129e5-279d-465d-afef-7cd04f1afb68	nextflow run asteri.nf -profile slurm
+2020-04-18 13:04:32	1m 12s	shrivelled_goldberg	OK	92b7fb00c326a299273370383bec0cd4	32cfb452-c6cc-45f3-8da3-9e2878c48eff	nextflow run asteri.nf -profile slurm
+2020-04-18 13:46:50	1m 12s	happy_lamarr	ERR	392a5b6920a83f607af353921a25f72d	2f9c5422-00ae-4ffc-be1a-89e0f6297e32	nextflow run asteri.nf -profile slurm
+2020-04-18 14:01:39	1m 12s	astonishing_leavitt	ERR	be1df8fb6ab654c771e36817568ddff9	acf6b39e-ccff-4a5f-9921-e2c63a96037d	nextflow run asteri.nf -profile slurm
+2020-04-18 14:04:40	1m 12s	confident_borg	ERR	b2a832da9f633dd85eca453dcb9e4eaf	78434bb0-cacd-40d7-8815-733aafe7af34	nextflow run asteri.nf -profile slurm
+2020-04-18 14:13:31	-	chaotic_bernard	-	a286857e225e0532228889dc50f494b4	4800d635-4fb1-4c65-bea5-7bc71407cd64	nextflow run asteri.nf -profile slurm
+2020-04-18 14:18:22	-	kickass_lalande	-	6fa218e53e0888018efd4b57315cc072	3d2a1181-87c8-4e82-ad02-6945d18fcd63	nextflow run asteri.nf -profile slurm
+2020-04-18 14:19:21	1m 12s	maniac_turing	ERR	28ec0927cace2cc4f26a9afa1b6d3f12	8016d0d2-2fa1-4824-9359-cdc25bdcf538	nextflow run asteri.nf -profile slurm
+2020-04-18 14:24:40	1m 12s	amazing_newton	OK	5f9f21dbe0c866238e921a13133922dc	2694756b-20ff-4881-bc93-e227a3b5afc7	nextflow run asteri.nf -profile slurm
+2020-04-18 14:29:28	-	backstabbing_cray	-	5f6ddae102cdb6972af0b2151e714d96	f5caeda4-a524-432a-aa03-3b2599a4f766	nextflow run asteri.nf -profile slurm
+2020-04-18 14:31:10	-	grave_almeida	-	e97e84801ca399ebb267f9d72ffa3eff	ef01f44f-6d98-4331-a81b-e81ca6bf08d1	nextflow run asteri.nf -profile slurm
+2020-04-18 15:17:10	-	insane_sammet	-	df71e61ec02c1685bee359925cc4cb9a	bf5a4fed-6d3b-4ac5-b1cf-649b37394f3b	nextflow run asteri.nf -profile slurm
+2020-04-18 15:17:55	-	ridiculous_hopper	-	ddc61c1af3bb88a8fe956b6fa3147c88	73ee481e-26ee-4d20-a060-35bd59495b8b	nextflow run asteri.nf -profile slurm
+2020-04-18 15:19:16	8.4s	lonely_kimura	ERR	23bf1080d6a3340ea0f21330b71da3e6	d6b9342a-1ab5-4f58-8a4a-6575145bd7a9	nextflow run asteri.nf -profile slurm
+2020-04-18 15:20:41	1m 11s	confident_ptolemy	ERR	aa790d8bcf1346a0ccc22b09f4208824	4c5785f9-db4c-48e5-9e24-048e6e9f722c	nextflow run asteri.nf -profile slurm
+2020-04-18 15:23:57	1m 12s	modest_jang	OK	baa8427f3f02870b1ae49405bdbfbfda	b3b8ee5c-0280-4816-862b-4424fed12e63	nextflow run asteri.nf -profile slurm
+2020-04-20 14:30:04	7.5s	dreamy_lavoisier	ERR	e9fc4753a8558394e1238314a965b98d	28591c52-1189-4b86-abd1-4fc7d364b6f9	nextflow run asteri.nf -profile slurm
+2020-04-20 14:38:05	12.3s	grave_heisenberg	ERR	2d6485c35be6d738fc839d0e6594a6a7	43aaca66-bb94-4c6b-bbe1-9301848e2f41	nextflow run asteri.nf -profile slurm
+2020-04-20 14:49:11	1m 12s	stupefied_gutenberg	OK	adc332e4d3954d0836a711c8ed720cd7	3e4b9178-9a8c-43c2-81d0-16692765721c	nextflow run asteri.nf -profile slurm
+2020-04-20 18:50:19	41.9s	elated_galileo	OK	adc332e4d3954d0836a711c8ed720cd7	c6842a1d-fbc0-48a9-89a0-158eef2eaab9	nextflow run asteri.nf -profile slurm
+2020-04-20 21:56:39	1m 12s	gloomy_wing	ERR	1a19d31938eaaa8ff7125ac8faf8ee28	127e6786-e9cf-4fb8-bb4d-585ea9d0c2de	nextflow run asteri.nf -profile slurm
+2020-04-20 21:59:08	37.1s	thirsty_poincare	ERR	1a19d31938eaaa8ff7125ac8faf8ee28	127e6786-e9cf-4fb8-bb4d-585ea9d0c2de	nextflow run asteri.nf -profile slurm -resume
+2020-04-20 22:04:26	7.2s	astonishing_hopper	ERR	df7e841a0eeb592861081c7675dcfc9d	127e6786-e9cf-4fb8-bb4d-585ea9d0c2de	nextflow run asteri.nf -profile slurm -resume
+2020-04-20 22:05:34	37.2s	distraught_shaw	ERR	df7e841a0eeb592861081c7675dcfc9d	127e6786-e9cf-4fb8-bb4d-585ea9d0c2de	nextflow run asteri.nf -profile slurm -resume
+2020-04-20 22:07:11	37.5s	serene_wright	OK	df7e841a0eeb592861081c7675dcfc9d	127e6786-e9cf-4fb8-bb4d-585ea9d0c2de	nextflow run asteri.nf -profile slurm -resume
+2020-04-20 22:19:46	1m 13s	condescending_brattain	OK	df7e841a0eeb592861081c7675dcfc9d	77b689fa-6555-47cc-a2fe-15688f3d2067	nextflow run asteri.nf -profile slurm
+2020-04-20 22:28:05	37.2s	clever_coulomb	ERR	111fa870d7a27e5925cf64b24a9edf29	b776882a-4f84-4aed-87ff-bcd9bc5f94fb	nextflow run asteri.nf -profile slurm
+2020-04-20 22:32:53	37.3s	small_mcclintock	ERR	9dc814e8af5bdcebd9e937229049e26c	b776882a-4f84-4aed-87ff-bcd9bc5f94fb	nextflow run asteri.nf -profile slurm -resume
+2020-04-20 22:34:26	42.1s	distracted_lumiere	ERR	9dc814e8af5bdcebd9e937229049e26c	a4bc24ae-21d1-4bf9-8650-0c1ea3ef4612	nextflow run asteri.nf -profile slurm
+2020-04-20 22:36:14	1m 12s	stupefied_wilson	OK	aea2ec37ef0c166cee76ecb5c037bbb0	dd639484-9df6-41f5-940c-2f37a0ca97ff	nextflow run asteri.nf -profile slurm
+2020-04-20 22:39:06	1m 12s	furious_turing	OK	5c2ac58b19f475b6d723bf16ae58bcf3	1b32cbae-49be-4655-87ec-5518834ed62c	nextflow run asteri.nf -profile slurm
+2020-04-20 22:47:26	42.3s	spontaneous_plateau	OK	5c2ac58b19f475b6d723bf16ae58bcf3	0284850a-29f8-45ed-9c5d-610a764e6b4a	nextflow run asteri.nf -profile slurm
+2020-04-21 15:47:14	5m 47s	shrivelled_mcclintock	OK	5394d34a6014ccb42aa6a37952d23cf5	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm
+2020-04-21 16:25:40	37s	festering_mendel	ERR	299316d444a4b1e610fec91de3be4fcc	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 16:30:53	36.8s	spontaneous_yalow	ERR	299316d444a4b1e610fec91de3be4fcc	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 16:32:02	36.6s	distracted_woese	ERR	299316d444a4b1e610fec91de3be4fcc	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 16:35:09	36.6s	kickass_brenner	OK	ce1ee8a8333a13f767315c9ad4255dad	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 16:37:29	6.6s	kickass_allen	OK	ce1ee8a8333a13f767315c9ad4255dad	509307f7-3dfc-4f6a-80dc-ff0fb7abe922	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 17:11:20	1m 37s	condescending_turing	ERR	c4602ec6087f07d1a010e13f7bcc609b	dceebedb-fd08-4cc1-8303-8f9da8cf5d86	nextflow run asteri.nf -profile slurm
+2020-04-21 17:14:00	3m 6s	small_lavoisier	ERR	12f269ead1a9e51edc6ac5ebecf47c1d	374d6be6-7685-4a12-9251-8ce9a9afd164	nextflow run asteri.nf -profile slurm
+2020-04-21 17:19:49	5m 7s	gloomy_tesla	ERR	5dc377c03ad882a283ca9a9b6c1ab10b	5fb06e49-7cd8-4067-9519-97b37af40ea4	nextflow run asteri.nf -profile slurm
+2020-04-21 17:31:44	7m 17s	happy_coulomb	OK	0e33d4c433b34bd2489069bd0e40e014	8b07ecb6-5168-4d2d-9eef-eb2a1fa8c055	nextflow run asteri.nf -profile slurm
+2020-04-21 18:03:10	-	clever_heisenberg	-	4437d4719b5352c70552ccae1cb62baa	26edeee6-a0d2-4daa-89f8-bca4f886ca5d	nextflow run asteri.nf -profile slurm
+2020-04-21 18:05:52	37.1s	curious_woese	ERR	7fc4c23e47310ac5d96bf822b863300b	0ab1311c-8f92-4823-90de-c5412dd7d5ae	nextflow run asteri.nf -profile slurm
+2020-04-21 18:07:38	36.8s	fabulous_murdock	ERR	cb71d1d0d4aa4155ba2d93b3fdd95cdd	7fb2a474-17fd-4f53-827d-f9610e218ae7	nextflow run asteri.nf -profile slurm
+2020-04-21 18:14:46	1m 12s	gloomy_jennings	ERR	e914d2b51c19c740301bf681f5616156	35c15441-958f-4da2-9505-c6d974c56253	nextflow run asteri.nf -profile slurm
+2020-04-21 18:22:25	1m 12s	festering_sinoussi	ERR	a02c61110491f0e952f985b48cb6bb8a	eb575a79-f9a1-45b4-8516-65a3ba887f93	nextflow run asteri.nf -profile slurm
+2020-04-21 18:28:28	1m 12s	awesome_cajal	ERR	a02c61110491f0e952f985b48cb6bb8a	9eb8fb62-9c32-4f45-bc51-1cbf9421b4b9	nextflow run asteri.nf -profile slurm
+2020-04-21 18:35:12	-	infallible_gutenberg	-	d7fca884dc20720dec614a6d59f238a4	9eb8fb62-9c32-4f45-bc51-1cbf9421b4b9	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 18:35:55	3s	friendly_boyd	ERR	61e0a42061e57650c580ec2193dc74d3	9eb8fb62-9c32-4f45-bc51-1cbf9421b4b9	nextflow run asteri.nf -profile slurm -resume
+2020-04-21 18:36:33	37s	irreverent_bassi	OK	e5363aa91b212b77cc405e33efc66533	9eb8fb62-9c32-4f45-bc51-1cbf9421b4b9	nextflow run asteri.nf -profile slurm -resume
+2020-05-09 23:33:14	41.9s	confident_mirzakhani	ERR	d9bd800d3c08cbea3d1fdeabe072038b	b6e6e3f4-5955-48f5-941b-09081222e647	nextflow run asteri.nf -profile slurm
+2020-05-09 23:36:19	12.5s	extravagant_jang	OK	de14e6c298219e282ba9e44df5016a5b	131ca60d-7ab1-4850-90fb-bbc45055f346	nextflow run asteri.nf -profile slurm
+2020-05-09 23:52:20	12.1s	jovial_ritchie	OK	de14e6c298219e282ba9e44df5016a5b	029e47a4-fc19-483c-82b7-39f467d192b4	nextflow run asteri.nf -profile slurm
+2020-05-10 00:43:05	11.8s	mad_kalam	OK	de14e6c298219e282ba9e44df5016a5b	f2a11e48-bd75-4502-9ad9-38e22ae43e88	nextflow run asteri.nf -profile slurm
+2020-05-10 00:46:01	6.8s	big_waddington	ERR	de14e6c298219e282ba9e44df5016a5b	f5b99ec3-3a33-4fba-a5ed-45ba3a23eab4	nextflow run asteri.nf -profile slurm
+2020-05-10 00:52:03	42s	shrivelled_joliot	OK	de14e6c298219e282ba9e44df5016a5b	d65c5db9-ae35-4a84-9311-02e9b5d4ed3c	nextflow run asteri.nf -profile slurm
+2020-05-10 00:54:08	6.7s	angry_keller	ERR	de14e6c298219e282ba9e44df5016a5b	d422a57d-eedf-4f3f-ad84-66a7cff8cd48	nextflow run asteri.nf -profile slurm
+2020-05-10 01:11:17	-	adoring_hilbert	-	4a56d015ffac2c72fe4d006e8bb073e6	12406ebc-2777-4bad-a0a9-4dac4d55d824	nextflow run asteri.nf -profile slurm
+2020-05-10 01:11:52	7.3s	silly_leakey	ERR	b91b4a2da7634713fed41772f3f0b0c5	29fbe048-deb8-4376-96bd-6ab22718da43	nextflow run asteri.nf -profile slurm
+2020-05-10 01:12:41	16.7s	fabulous_shaw	OK	388f91a5ecfae50a7dc67384dbd58c43	1fd1a75c-269f-442d-b9ee-bb581a42c449	nextflow run asteri.nf -profile slurm
+2020-05-10 01:13:43	11.7s	gigantic_goldstine	ERR	388f91a5ecfae50a7dc67384dbd58c43	e19dd2f3-edc9-4919-9b93-957129f36252	nextflow run asteri.nf -profile slurm
+2020-05-10 01:24:47	15.8s	focused_colden	ERR	f7d76ad5594b02eba70f49e1acfe2762	f808d4e0-90fc-4685-9ec6-92a31c279c6b	nextflow run asteri.nf -profile slurm
+2020-05-10 01:28:04	14.9s	serene_solvay	ERR	f7d76ad5594b02eba70f49e1acfe2762	5eeacf55-cb20-4dbb-b624-060673da35c2	nextflow run asteri.nf -profile slurm

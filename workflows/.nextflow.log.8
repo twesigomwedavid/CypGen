@@ -1,0 +1,102 @@
+May-10 00:45:59.517 [main] DEBUG nextflow.cli.Launcher - $> nextflow run asteri.nf -profile slurm
+May-10 00:45:59.870 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.01.0
+May-10 00:45:59.928 [main] INFO  nextflow.cli.CmdRun - Launching `asteri.nf` [big_waddington] - revision: de14e6c298
+May-10 00:45:59.973 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/david/asterigraph/workflows/nextflow.config
+May-10 00:45:59.975 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/david/asterigraph/workflows/nextflow.config
+May-10 00:46:00.020 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-10 00:46:00.848 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-10 00:46:01.086 [main] DEBUG nextflow.Session - Session uuid: f5b99ec3-3a33-4fba-a5ed-45ba3a23eab4
+May-10 00:46:01.086 [main] DEBUG nextflow.Session - Run name: big_waddington
+May-10 00:46:01.088 [main] DEBUG nextflow.Session - Executor pool size: 12
+May-10 00:46:01.108 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.01.0 build 5264
+  Created: 12-02-2020 10:14 UTC (12:14 SAST)
+  System: Linux 3.10.0-1062.18.1.el7.x86_64
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_252-b09
+  Encoding: UTF-8 (UTF-8)
+  Process: 24946@cream-ce.core.wits.ac.za [146.141.240.90]
+  CPUs: 12 - Mem: 31.3 GB (311.8 MB) - Swap: 7.9 GB (6.9 GB)
+May-10 00:46:01.164 [main] DEBUG nextflow.Session - Work-dir: /home/david/asterigraph/workflows/work [nfs]
+May-10 00:46:01.222 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+May-10 00:46:01.225 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-10 00:46:01.580 [main] DEBUG nextflow.Session - Session start invoked
+May-10 00:46:01.917 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-10 00:46:01.933 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: call_variants, analyse_vcf
+May-10 00:46:01.982 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /spaces/david/kgp_cyp2d_region/; pattern: *{bam,bai}; options: [type:file]
+May-10 00:46:02.285 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-10 00:46:02.286 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-10 00:46:02.307 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-10 00:46:02.319 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-10 00:46:02.328 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-10 00:46:02.429 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > call_variants -- maxForks: 12; blocking: false
+May-10 00:46:02.505 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-10 00:46:02.505 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-10 00:46:02.508 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > analyse_vcf -- maxForks: 12; blocking: false
+May-10 00:46:02.514 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-10 00:46:02.514 [main] DEBUG nextflow.Session - Session await
+May-10 00:46:02.972 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (9) > jobId: 2793094; workDir: /home/david/asterigraph/workflows/work/06/7949dc2e45eb9fc8ea68391f7ad00c
+May-10 00:46:02.981 [Task submitter] INFO  nextflow.Session - [06/7949dc] Submitted process > call_variants (9)
+May-10 00:46:03.025 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (5) > jobId: 2793095; workDir: /home/david/asterigraph/workflows/work/cb/352a4211ddd80a1ac16011e404867d
+May-10 00:46:03.026 [Task submitter] INFO  nextflow.Session - [cb/352a42] Submitted process > call_variants (5)
+May-10 00:46:03.064 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (6) > jobId: 2793096; workDir: /home/david/asterigraph/workflows/work/30/c11f5f8b774c5d18416fed4a3c1216
+May-10 00:46:03.064 [Task submitter] INFO  nextflow.Session - [30/c11f5f] Submitted process > call_variants (6)
+May-10 00:46:03.098 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (4) > jobId: 2793097; workDir: /home/david/asterigraph/workflows/work/71/d34f6b263c853fdcca73a83668f0ff
+May-10 00:46:03.098 [Task submitter] INFO  nextflow.Session - [71/d34f6b] Submitted process > call_variants (4)
+May-10 00:46:03.135 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (3) > jobId: 2793098; workDir: /home/david/asterigraph/workflows/work/34/7cac09b94953d34428ae28d66b1cb9
+May-10 00:46:03.136 [Task submitter] INFO  nextflow.Session - [34/7cac09] Submitted process > call_variants (3)
+May-10 00:46:03.174 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (10) > jobId: 2793099; workDir: /home/david/asterigraph/workflows/work/ef/c1da6891c95848eaa6bed07d31332b
+May-10 00:46:03.174 [Task submitter] INFO  nextflow.Session - [ef/c1da68] Submitted process > call_variants (10)
+May-10 00:46:03.212 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (1) > jobId: 2793100; workDir: /home/david/asterigraph/workflows/work/eb/627346d0018efc1888c2e8fd19c881
+May-10 00:46:03.213 [Task submitter] INFO  nextflow.Session - [eb/627346] Submitted process > call_variants (1)
+May-10 00:46:03.255 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (2) > jobId: 2793101; workDir: /home/david/asterigraph/workflows/work/1c/f0f3222b951963675b4da279429ead
+May-10 00:46:03.256 [Task submitter] INFO  nextflow.Session - [1c/f0f322] Submitted process > call_variants (2)
+May-10 00:46:03.286 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (8) > jobId: 2793102; workDir: /home/david/asterigraph/workflows/work/b7/da57eb2238859c9d46d1ec173826a1
+May-10 00:46:03.287 [Task submitter] INFO  nextflow.Session - [b7/da57eb] Submitted process > call_variants (8)
+May-10 00:46:03.318 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (7) > jobId: 2793103; workDir: /home/david/asterigraph/workflows/work/df/85b0f578f25417bd9290f672171a25
+May-10 00:46:03.319 [Task submitter] INFO  nextflow.Session - [df/85b0f5] Submitted process > call_variants (7)
+May-10 00:46:07.354 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793094; id: 7; name: call_variants (9); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/06/7949dc2e45eb9fc8ea68391f7ad00c started: 1589064367344; exited: 2020-05-09T22:46:05.013903Z; ]
+May-10 00:46:07.411 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'call_variants (9)'
+
+Caused by:
+  Process `call_variants (9)` terminated with an error exit status (1)
+
+Command executed:
+
+  graphtyper genotype /spaces/gerrit/dbs/gatk/bundle/2.8/b37/human_g1k_v37_decoy.fasta --sam=NA19917_region.bam --region=22:42522300-42528400 --output=NA19917_region_var --prior_vcf=/home/david/asterigraph/resources/common_var_plus_core_var.vcf.gz
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  [2020-05-10 00:46:04.955172] <error> [graphtyper::rocksdb] Could not destroy database '/tmp/graphtyper_200510_004603_22_042522300/it2/graph_gti'. Message: IO error: While lock file: /tmp/graphtyper_200510_004603_22_042522300/it2/graph_gti/LOCK: Resource temporarily unavailable
+  [2020-05-10 00:46:04.956770] <error> [graphtyper::rocksdb] While trying to open '/tmp/graphtyper_200510_004603_22_042522300/it2/graph_gti'. Message: IO error: While lock file: /tmp/graphtyper_200510_004603_22_042522300/it2/graph_gti/LOCK: Resource temporarily unavailable
+
+Work dir:
+  /home/david/asterigraph/workflows/work/06/7949dc2e45eb9fc8ea68391f7ad00c
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+May-10 00:46:07.430 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `call_variants (9)` terminated with an error exit status (1)
+May-10 00:46:07.472 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] analyse_vcf
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+May-10 00:46:07.480 [main] DEBUG nextflow.Session - Session await > all process finished
+May-10 00:46:07.480 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-10 00:46:07.490 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793095; id: 9; name: call_variants (5); status: COMPLETED; exit: 0; error: -; workDir: /home/david/asterigraph/workflows/work/cb/352a4211ddd80a1ac16011e404867d started: 1589064367482; exited: 2020-05-09T22:46:06.53091Z; ]
+May-10 00:46:07.520 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (8)
+May-10 00:46:07.525 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793096; id: 4; name: call_variants (6); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/30/c11f5f8b774c5d18416fed4a3c1216 started: 1589064367518; exited: 2020-05-09T22:46:05.089903Z; ]
+May-10 00:46:07.536 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793097; id: 8; name: call_variants (4); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/71/d34f6b263c853fdcca73a83668f0ff started: 1589064367530; exited: 2020-05-09T22:46:04.777902Z; ]
+May-10 00:46:07.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793098; id: 2; name: call_variants (3); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/34/7cac09b94953d34428ae28d66b1cb9 started: 1589064367540; exited: 2020-05-09T22:46:04.679901Z; ]
+May-10 00:46:07.557 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793099; id: 10; name: call_variants (10); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/ef/c1da6891c95848eaa6bed07d31332b started: 1589064367552; exited: 2020-05-09T22:46:04.762902Z; ]
+May-10 00:46:07.571 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793100; id: 1; name: call_variants (1); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/eb/627346d0018efc1888c2e8fd19c881 started: 1589064367562; exited: 2020-05-09T22:46:04.862902Z; ]
+May-10 00:46:07.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793101; id: 3; name: call_variants (2); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/1c/f0f3222b951963675b4da279429ead started: 1589064367576; exited: 2020-05-09T22:46:04.912902Z; ]
+May-10 00:46:07.587 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=7; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=2; runningCount=-6; retriesCount=0; abortedCount=6; succeedDuration=8ms; failedDuration=47ms; cachedDuration=0ms;loadCpus=-6; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+May-10 00:46:07.600 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793102; id: 6; name: call_variants (8); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/b7/da57eb2238859c9d46d1ec173826a1 started: 1589064367592; exited: 2020-05-09T22:46:05.253904Z; ]
+May-10 00:46:07.686 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793103; id: 5; name: call_variants (7); status: COMPLETED; exit: 1; error: -; workDir: /home/david/asterigraph/workflows/work/df/85b0f578f25417bd9290f672171a25 started: 1589064367606; exited: 2020-05-09T22:46:06.66491Z; ]
+May-10 00:46:07.756 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-10 00:46:07.822 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

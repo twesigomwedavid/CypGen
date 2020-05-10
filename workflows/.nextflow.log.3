@@ -1,0 +1,54 @@
+May-10 01:12:39.718 [main] DEBUG nextflow.cli.Launcher - $> nextflow run asteri.nf -profile slurm
+May-10 01:12:40.078 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.01.0
+May-10 01:12:40.135 [main] INFO  nextflow.cli.CmdRun - Launching `asteri.nf` [fabulous_shaw] - revision: 388f91a5ec
+May-10 01:12:40.178 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/david/asterigraph/workflows/nextflow.config
+May-10 01:12:40.180 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/david/asterigraph/workflows/nextflow.config
+May-10 01:12:40.223 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+May-10 01:12:41.059 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, slurm]
+May-10 01:12:41.262 [main] DEBUG nextflow.Session - Session uuid: 1fd1a75c-269f-442d-b9ee-bb581a42c449
+May-10 01:12:41.262 [main] DEBUG nextflow.Session - Run name: fabulous_shaw
+May-10 01:12:41.263 [main] DEBUG nextflow.Session - Executor pool size: 12
+May-10 01:12:41.284 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.01.0 build 5264
+  Created: 12-02-2020 10:14 UTC (12:14 SAST)
+  System: Linux 3.10.0-1062.18.1.el7.x86_64
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_252-b09
+  Encoding: UTF-8 (UTF-8)
+  Process: 2752@cream-ce.core.wits.ac.za [146.141.240.90]
+  CPUs: 12 - Mem: 31.3 GB (378.5 MB) - Swap: 7.9 GB (6.9 GB)
+May-10 01:12:41.342 [main] DEBUG nextflow.Session - Work-dir: /home/david/asterigraph/workflows/work [nfs]
+May-10 01:12:41.405 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+May-10 01:12:41.408 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-10 01:12:41.713 [main] DEBUG nextflow.Session - Session start invoked
+May-10 01:12:42.063 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-10 01:12:42.079 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: call_variants, analyse_vcf, filter_bam
+May-10 01:12:42.132 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/david/GeT-RM/bam_links/; pattern: NA18509*{bam,bai}; options: [type:file]
+May-10 01:12:42.435 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-10 01:12:42.435 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-10 01:12:42.456 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+May-10 01:12:42.468 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+May-10 01:12:42.476 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+May-10 01:12:42.578 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_bam -- maxForks: 12; blocking: false
+May-10 01:12:42.646 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-10 01:12:42.646 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-10 01:12:42.650 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > call_variants -- maxForks: 12; blocking: false
+May-10 01:12:42.671 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+May-10 01:12:42.672 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+May-10 01:12:42.674 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > analyse_vcf -- maxForks: 12; blocking: false
+May-10 01:12:42.679 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-10 01:12:42.679 [main] DEBUG nextflow.Session - Session await
+May-10 01:12:43.037 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process filter_bam (1) > jobId: 2793118; workDir: /home/david/asterigraph/workflows/work/3d/d021d78300bf969c20f1aec2732c78
+May-10 01:12:43.047 [Task submitter] INFO  nextflow.Session - [3d/d021d7] Submitted process > filter_bam (1)
+May-10 01:12:47.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793118; id: 1; name: filter_bam (1); status: COMPLETED; exit: 0; error: -; workDir: /home/david/asterigraph/workflows/work/3d/d021d78300bf969c20f1aec2732c78 started: 1589065967490; exited: 2020-05-09T23:12:44.365039Z; ]
+May-10 01:12:47.627 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process call_variants (1) > jobId: 2793119; workDir: /home/david/asterigraph/workflows/work/26/c5ffe07aa12d94dd31835b8053479d
+May-10 01:12:47.628 [Task submitter] INFO  nextflow.Session - [26/c5ffe0] Submitted process > call_variants (1)
+May-10 01:12:52.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793119; id: 2; name: call_variants (1); status: COMPLETED; exit: 0; error: -; workDir: /home/david/asterigraph/workflows/work/26/c5ffe07aa12d94dd31835b8053479d started: 1589065972485; exited: 2020-05-09T23:12:50.815068Z; ]
+May-10 01:12:52.622 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process analyse_vcf (1) > jobId: 2793120; workDir: /home/david/asterigraph/workflows/work/ff/a30c70a39ff5a3e555194f181bbaca
+May-10 01:12:52.623 [Task submitter] INFO  nextflow.Session - [ff/a30c70] Submitted process > analyse_vcf (1)
+May-10 01:12:57.491 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 2793120; id: 3; name: analyse_vcf (1); status: COMPLETED; exit: 0; error: -; workDir: /home/david/asterigraph/workflows/work/ff/a30c70a39ff5a3e555194f181bbaca started: 1589065977485; exited: 2020-05-09T23:12:53.51908Z; ]
+May-10 01:12:57.514 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
+May-10 01:12:57.527 [main] DEBUG nextflow.Session - Session await > all process finished
+May-10 01:12:57.529 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-10 01:12:57.552 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=25ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+May-10 01:12:57.654 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-10 01:12:57.695 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
