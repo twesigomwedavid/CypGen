@@ -15,7 +15,7 @@ process call_variants {
 //   maxForks 5
 
    input:
-      set val(name), file(bam) from aln_ch
+      set val(name), file(bam) from in_ch
 
    output:	        
       set val(name), path("${name}_var") into var_ch
