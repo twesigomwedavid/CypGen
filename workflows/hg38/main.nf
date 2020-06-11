@@ -30,6 +30,7 @@ process call_variants {
 
    input:
       set val(name), file(bam) from in_ch
+      file hg38
 
    output:	        
       set val(name), path("${name}_var"), path("${name}_sv_del"), path("${name}_sv_dup"), file("${name}_2d6_ctrl.depth") into var_ch
