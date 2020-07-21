@@ -1,4 +1,4 @@
 # CypGen
-Leveraging genome graph-based variant detection for accurate genotyping of cytochrome P450 genes.
+Calling Cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
 Model gene: CYP2D6
