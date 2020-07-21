@@ -3,7 +3,7 @@
 import os
 import sys
 import subprocess
-from snv_def_caller import *
+from snv_def_modules import *
 
 database = sys.argv[1]
 infile = sys.argv[2]
@@ -20,6 +20,8 @@ print ("\n----------------------------\n")
 print ("\nCore variants:")
 print ("\n" + get_core_variants(infile))
 print ("\nCandidate alleles:")
-print ("\n" + snf_def_alleles[0])
+print ("\n")
+print (snf_def_alleles[0])
 print ("\nResult:")
-print ("\n" + snf_def_alleles[1])
+print ("\n") 
+print(snf_def_alleles[1])
