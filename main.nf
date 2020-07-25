@@ -84,7 +84,7 @@ process call_snvs1 {
 
    input:
       set val(name), file(bam) from data1
-      val ref_dir from Channel.value("${ref_dir_val}")
+      path ref_dir from Channel.value("${ref_dir_val}")
       path res_dir
 
    output:	        
@@ -103,7 +103,7 @@ process call_snvs2 {
 
    input:
       set val(name), file(bam) from data2
-      val ref_dir from Channel.value("${ref_dir_val}")
+      path ref_dir from Channel.value("${ref_dir_val}")
 
    output: 
       set val(name), path("${name}_var_2") into var_ch2
@@ -121,7 +121,7 @@ process call_sv_del {
 
    input:
       set val(name), file(bam) from data3
-      val ref_dir from Channel.value("${ref_dir_val}")
+      path ref_dir from Channel.value("${ref_dir_val}")
       path res_dir
 
    output:
@@ -140,7 +140,7 @@ process call_sv_dup {
 
    input:
       set val(name), file(bam) from data4
-      val ref_dir from Channel.value("${ref_dir_val}")
+      path ref_dir from Channel.value("${ref_dir_val}")
       path res_dir
 
    output:
