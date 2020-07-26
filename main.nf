@@ -158,6 +158,7 @@ process get_depth {
 
    input:
       set val(name), file(bam) from data5
+      path ref_dir from Channel.value("${ref_dir_val}")
       path res_dir
 
    output:
@@ -165,7 +166,7 @@ process get_depth {
 
    script:
      """   
-	samtools bedcov ${res_dir}/test3.bed ${name}.${ext} > ${name}_2d6_ctrl.depth      
+	samtools bedcov --reference ${ref_dir}/${ref_genome} ${res_dir}/test3.bed ${name}.${ext} > ${name}_2d6_ctrl.depth      
 
      """
 
