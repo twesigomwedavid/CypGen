@@ -1,9 +1,8 @@
 # CypGen
 Calling human cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
-Model gene: CYP2D6
+Model gene: CYP2D6 (Support for more CYP genes to be added soon)
 
-## Introduction
 CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
 
 Maintainer: David Twesigomwe (twesigomwedavid@gmail.com)
