@@ -88,10 +88,11 @@ elif cn == '2':
         print (snv_def_alleles)
     else:
         snv_def_alleles = snv_def_alleles.split("/")
-        ind_star2 = snv_def_alleles.index('*2')
-        ind_other = 1 - ind_star2
 
         if snv_def_alleles[0] == '*2' or snv_def_alleles[1] == '*2':
+            ind_star2 = snv_def_alleles.index('*2')
+            ind_other = 1 - ind_star2
+
             test_13_v2 = hybrid_13_test1(cov_in4_3pr, cov_5pr_in4)
 
             if test_13_v2 == 'norm_var':
@@ -101,6 +102,10 @@ elif cn == '2':
             elif test_13_v2 == 'hyb_13_2':
                 print("\n")
                 print(snv_def_alleles[ind_other] + "/" + "*13+*2")
+
+        else:
+            print("\n")
+            print("/".join(snv_def_alleles))
 
 
 elif cn == '0':
