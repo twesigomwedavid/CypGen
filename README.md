@@ -6,6 +6,8 @@ Model gene: CYP2D6
 ## Introduction
 CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
 
+Maintainer: David Twesigomwe (twesigomwedavid@gmail.com)
+
 ## Quick Start
 
 The following are required to run the CypGen pipeline;
