@@ -12,8 +12,8 @@ Maintainer: David Twesigomwe (twesigomwedavid@gmail.com)
 The following are required to run the CypGen pipeline;
 
 1. Prerequisite software
-    - [`Nextflow`](https://nf-co.re/usage/installation)
-    - [`Singularity`](https://sylabs.io/) or [`Docker`](https://docs.docker.com)
+    - [`Nextflow`](https://nf-co.re/usage/installation) (preferably v18.x or higher)
+    - [`Singularity`](https://sylabs.io/) (v2.3.x or higher) or [`Docker`](https://docs.docker.com)
     
 Singularity is highly recommended especially for running the pipeline in an HPC environment running Linux OS. Docker desktop is recommended for MacOS users intending to run the pipeline on a local machine.
 
@@ -45,7 +45,8 @@ mv nextflow $HOME/bin
 
 ##### Singularity or Docker:
 
-For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html))
+For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
+
 
 For Docker installation, please refer to the excellent documentation [here](https://docs.docker.com/get-docker))
 
@@ -54,6 +55,27 @@ For Docker installation, please refer to the excellent documentation [here](http
 Clone the CypGen repository by running the following command:
 
 ```bash
-git clone https://github.com/twesigomwedavid/CypGen.git
+git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
+
+
+### Running CypGen on the provided test dataset(s) using Singularity
+
+The following steps assume that;
+i. CypGen is the current working directory 
+ii. Nextflow and Singularity are already installed.
+
+
+##### For execution on local machine
+
+```bash
+nextflow run main.nf -profile standard,test,singularity
+```
+
+##### For execution on SLURM scheduler 
+
+```bash
+nextflow run main.nf -profile slurm,test,singularity
+```
+
 
