@@ -4,7 +4,7 @@ Calling human cytochrome P450 star alleles by leveraging genome graph-based vari
 Model gene: CYP2D6
 
 ## Introduction
-The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
+CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
 
 ## Quick Start
 
