@@ -8,7 +8,7 @@ CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management
 
 Maintainer: David Twesigomwe (twesigomwedavid@gmail.com)
 
-## Quick Start
+## Getting started
 
 The following are required to run the CypGen pipeline;
 
