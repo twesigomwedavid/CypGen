@@ -59,7 +59,7 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
 
 
-### Running CypGen on the provided test dataset(s) using Singularity
+### Running CypGen on the provided test dataset(s) - using Singularity
 
 The following steps assume that;
     i. CypGen is your current working directory
@@ -107,3 +107,89 @@ Result:
 *17/*29
 
 ```
+
+### Running CypGen on your project data - using Singularity
+
+Once again, the following steps assume that;
+    i. CypGen is your current working directory
+    ii. Nextflow and Singularity are already installed
+    
+    
+#### Step 1 - Set the input paths in the nextflow.config file
+
+Set the parameters for your input data (`in_bam`) and the reference genome (`ref_file`) in the nextflow.config file following the syntax described therein. 
+
+For single sample:
+
+```bash
+in_bam = "/path/to/Sample*{bam,bai}"
+```
+
+For all samples stored in the same directory (Advisable to create symlinks in a common directory if the samples are stored in different directories):
+
+```bash
+in_bam = "/path/to/*{bam,bai}"
+```
+
+Feel free to also specify samples with particular strings in their names:
+
+```bash
+in_bam = "/path/to/HG*{bam,bai}"
+```
+
+For CRAM input:
+
+```bash
+in_bam = "/path/to/Sample*{cram,crai}"
+```
+
+For reference genome:
+
+```bash
+ref_file = "/path/to/reference/genome.fasta"
+```
+
+#### Step 2 - Run the pipeline (Default is for GRCh38 aligned data)
+
+For execution on a local machine
+
+```bash
+nextflow run main.nf -profile standard 
+```
+
+For execution via a scheduler e.g. SLURM 
+
+```bash
+nextflow run main.nf -profile slurm 
+```
+
+##### Using CRAM input
+
+If you are using CRAM files as input, then ensure to supply the option `--format compressed`
+
+```bash
+nextflow run main.nf -profile [standard/slurm etc] --format compressed
+```
+
+
+##### GRCh37 aligned data
+
+In case your data is aligned to `b37` or `humanG1Kv37` (have contigs without 'chr' at the start), run the pipeline using the option `--build b37` option:
+
+```bash
+nextflow run main.nf -profile [standard/slurm etc] --build b37
+```
+
+If instead your data is aligned to `hg19` or `GRCh37` (have most/all contigs starting with 'chr') run the pipeline using the option `--build hg19` option:
+
+```bash
+nextflow run main.nf -profile [standard/slurm etc] --build hg19
+```
+
+
+#### Step 3 
+
+
+
+
+
