@@ -62,8 +62,8 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ### Running CypGen on the provided test dataset(s) using Singularity
 
 The following steps assume that;
-    - CypGen is your current working directory
-    - Nextflow and Singularity are already installed
+    i. CypGen is your current working directory
+    ii. Nextflow and Singularity are already installed
 
 
 ##### For execution on local machine or single cluster node
