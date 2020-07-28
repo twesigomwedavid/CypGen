@@ -252,7 +252,6 @@ process analyse_2 {
 
    input:
       set val(name), path("${name}_gene_dup"), path("${name}_int") from dup_int
-     // set val(name), path("${name}_int") from core_vars1
 
    output:
       set val(name), path("${name}_gene_dup/${name}_gene_dup_summary.txt") into dup_ch
@@ -277,7 +276,6 @@ process analyse_3 {
 
    input:
       set val(name), path("${name}_vars"), path("${name}_int") from dip_req
-     // set val(name), path("${name}_int") from core_vars2
 
    output:
       set val(name), path("${name}_vars/${name}_core_snvs.dip"), path("${name}_vars/${name}_full.dip"), path("${name}_vars/${name}_gt.dip") into prep_ch
@@ -308,9 +306,6 @@ process call_stars {
 
    input:
       set val(name), path("${name}_vars/${name}_core_snvs.dip"), path("${name}_vars/${name}_full.dip"), path("${name}_vars/${name}_gt.dip"), path("${name}_gene_del/${name}_gene_del_summary.txt"), path("${name}_gene_dup/${name}_gene_dup_summary.txt"), file("${name}_2d6_dp") from fin_files
-     // set val(name), path("${name}_gene_del/${name}_gene_del_summary.txt") from del_ch
-     // set val(name), path("${name}_gene_dup/${name}_gene_dup_summary.txt") from dup_ch
-     // set val(name), file("${name}_2d6_dp") from sv_ch3
       path db
       path caller_dir
 
