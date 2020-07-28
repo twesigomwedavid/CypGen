@@ -27,7 +27,7 @@ Note: For a full description of the differences among reference genomes, please 
 
 ### Installation
 
-##### Nextflow:
+#### Nextflow:
 
 Install Nextflow by running the following command (Skip if you have Nextflow installed already):
 
@@ -43,14 +43,16 @@ mv nextflow $HOME/bin
 
 (The full Nextflow documentation can be found [here](https://www.nextflow.io))
 
-##### Singularity or Docker:
 
-For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds - set by system administrator (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
+#### Singularity or Docker:
+
+For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds - set by your system administrator (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
 
 
 For Docker installation, please refer to the excellent documentation [here](https://docs.docker.com/get-docker))
 
-##### CypGen:
+
+#### CypGen repository:
 
 Clone the CypGen repository by running the following command:
 
@@ -59,7 +61,7 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
 
 
-### Running CypGen on the provided test dataset(s) - using Singularity
+## Running CypGen on the provided test dataset(s) - using Singularity
 
 The following steps assume that;
     i. CypGen is your current working directory
@@ -108,14 +110,15 @@ Result:
 
 ```
 
-### Running CypGen on your project data - using Singularity
+
+## Running CypGen on your project data - using Singularity
 
 Once again, the following steps assume that;
     i. CypGen is your current working directory
     ii. Nextflow and Singularity are already installed
     
     
-#### Step 1 - Set the input paths in the nextflow.config file
+### Step 1 - Set the input paths in the nextflow.config file
 
 Set the parameters for your input data (`in_bam`) and the reference genome (`ref_file`) in the nextflow.config file following the syntax described therein. 
 
@@ -156,7 +159,7 @@ Optionally, you may set the `out_dir` to a path of choice. Default is `./results
 
 
 
-#### Step 2 - Run the pipeline (Default is for GRCh38 aligned data)
+### Step 2 - Run the pipeline (Default is for GRCh38 aligned data)
 
 For execution on a local machine
 
@@ -194,8 +197,39 @@ nextflow run main.nf -profile [standard/slurm etc] --build hg19
 ```
 
 
-#### Step 3 
+### Step 3 
 
-See result files matching each sample in the `./results` folder or custom defined path. 
+See result files matching each sample in the `./results` folder or custom predefined path!
 
+
+
+## Running CypGen using Docker
+
+At the moment, only Docker Desktop on MacOS has been tested. The following steps assume that you have already installed Docker Desktop on your Mac as indicated above.
+
+
+### Step 1 - Pull Docker container
+
+Pull the `cypgen-dev` Docker container by running the command below:
+
+```bash
+docker pull twesigomwedavid/cypgen-dev:latest
+```
+
+### Step 1 - Set the input paths in the nextflow.config file
+
+Follow the steps described above regarding setting the input paths for the WGS BAM/CRAM files as well as the reference genome. 
+
+The only exta modification required is commenting out the Singularity container variable (default) and instead setting the variable `container` to point to the docker image i.e.
+
+```bash
+container = "twesigomwedavid/cypgen-dev:latest"
+```
+
+See nextflow.config file
+
+
+### Step 2 and 3 - Running the pipeline and obtaining results
+
+Follow similar steps as with Singularity!
 
