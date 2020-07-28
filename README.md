@@ -197,7 +197,7 @@ nextflow run main.nf -profile [standard/slurm etc] --build hg19
 ```
 
 
-### Step 3 
+### Step 3 - Results
 
 See result files matching each sample in the `./results` folder or custom predefined path!
 
