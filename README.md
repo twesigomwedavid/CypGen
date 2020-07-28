@@ -79,3 +79,31 @@ nextflow run main.nf -profile slurm -c tests/config/test.config
 ```
 
 
+#### Expected output
+
+The expected output for test dataset SIM001.bam will be found in the ./results directory 
+
+```
+--------------------------------------------
+
+CYP2D6 Star Allele Calling with CypGen
+
+--------------------------------------------
+
+CN = 2
+
+
+Core variants:
+42126611~C>G~1/1;42127608~C>T~0/1;42127941~G>A~1/1;42129132~C>T~0/1;42129770~G>A~0/1
+
+
+Candidate alleles:
+['17.v1_29.v1']
+
+
+Result:
+
+
+*17/*29
+
+```
