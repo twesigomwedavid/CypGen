@@ -45,7 +45,7 @@ mv nextflow $HOME/bin
 
 ##### Singularity or Docker:
 
-For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
+For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds - set by system administrator (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
 
 
 For Docker installation, please refer to the excellent documentation [here](https://docs.docker.com/get-docker))
@@ -66,16 +66,16 @@ i. CypGen is the current working directory
 ii. Nextflow and Singularity are already installed.
 
 
-##### For execution on local machine
+##### For execution on local machine or single cluster node
 
 ```bash
-nextflow run main.nf -profile standard,test,singularity
+nextflow run main.nf -profile standard,test
 ```
 
 ##### For execution on SLURM scheduler 
 
 ```bash
-nextflow run main.nf -profile slurm,test,singularity
+nextflow run main.nf -profile slurm,test
 ```
 
 
