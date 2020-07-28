@@ -81,7 +81,7 @@ nextflow run main.nf -profile slurm -c tests/config/test.config
 
 #### Expected output
 
-The expected output file (SIM001_2d6.alleles) for test dataset SIM001.bam will be found in the ./results directory. It should contain the following; 
+The expected output file (SIM001_2d6.alleles) for test dataset SIM001.bam will be found in the `./results` directory. It should contain the following; 
 
 ```
 --------------------------------------------
@@ -149,6 +149,13 @@ For reference genome:
 ref_file = "/path/to/reference/genome.fasta"
 ```
 
+Results directory:
+
+Optionally, you may set the `out_dir` to a path of choice. Default is `./results` under the CypGen directory. 
+
+
+
+
 #### Step 2 - Run the pipeline (Default is for GRCh38 aligned data)
 
 For execution on a local machine
@@ -189,7 +196,6 @@ nextflow run main.nf -profile [standard/slurm etc] --build hg19
 
 #### Step 3 
 
-
-
+See result files matching each sample in the `./results` folder or custom defined path. 
 
 
