@@ -69,13 +69,13 @@ ii. Nextflow and Singularity are already installed.
 ##### For execution on local machine or single cluster node
 
 ```bash
-nextflow run main.nf -profile standard,test
+nextflow run main.nf -profile standard -c tests/config/test.config
 ```
 
 ##### For execution on SLURM scheduler 
 
 ```bash
-nextflow run main.nf -profile slurm,test
+nextflow run main.nf -profile slurm -c tests/config/test.config
 ```
 
 
