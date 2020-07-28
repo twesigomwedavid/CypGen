@@ -62,8 +62,8 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ### Running CypGen on the provided test dataset(s) using Singularity
 
 The following steps assume that;
-i. CypGen is the current working directory 
-ii. Nextflow and Singularity are already installed.
+    - CypGen is the current working directory 
+    - Nextflow and Singularity are already installed.
 
 
 ##### For execution on local machine or single cluster node
@@ -81,7 +81,7 @@ nextflow run main.nf -profile slurm -c tests/config/test.config
 
 #### Expected output
 
-The expected output for test dataset SIM001.bam will be found in the ./results directory 
+The expected output file (SIM001_2d6.alleles) for test dataset SIM001.bam will be found in the ./results directory. It should contain the following; 
 
 ```
 --------------------------------------------
