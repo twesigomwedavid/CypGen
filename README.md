@@ -46,7 +46,7 @@ mv nextflow $HOME/bin
 
 #### Singularity or Docker:
 
-For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows user defined binds - set by your system administrator (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
+For Singularity installation, please refer to the excellent documentation [here](https://sylabs.io/guides/3.0/user-guide/installation.html)). Ensure that your Singularity installation allows `user defined binds` - set by your system administrator (See [Singularity config file](https://sylabs.io/guides/3.0/user-guide/installation.html) documentation) 
 
 
 For Docker installation, please refer to the excellent documentation [here](https://docs.docker.com/get-docker))
