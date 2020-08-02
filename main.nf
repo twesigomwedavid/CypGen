@@ -14,6 +14,19 @@ if (params.build=='b37') {
     region_b2 = "042522300-042528400"
     debug38 = ""
 
+
+} else if (params.build=='hg19') {
+    db = params.build37db
+    res_dir = params.build37res_mod
+    caller_dir = params.build37call
+    chrom = "chr22"
+    region_a1 = "chr22:42522000-42542000"
+    region_a2 = "042522000-042542000"
+    region_b1 = "chr22:42522300-42528400"
+    region_b2 = "042522300-042528400"
+    debug38 = ""
+
+
 } else {
     db = params.build38db
     res_dir = params.build38res
