@@ -26,28 +26,54 @@ hap_dbs = sys.argv[9]
 #cn = get_total_CN(cov_file)
 
 
-supp_core_vars = get_core_variants(infile)
+cn = get_total_CN(cov_file)[0]
 
-snv_def_calls = cand_snv_allele_calling(database, infile, infile_full, infile_full_gt, infile_spec)
+print("Initially computed CN = {}".format(cn))
+
+supp_core_vars = get_core_variants(infile, cn)
+
+print("\nSample core variants:")
+print(supp_core_vars)
+
+
+snv_def_calls = cand_snv_allele_calling(database, infile, infile_full, infile_full_gt, infile_spec, cn)
+
+if snv_def_calls == None:
+    print("\nResult:")
+    print("Possible novel allele or suballele present: interpret with caution")
+    sys.exit()
 
 snv_cand_alleles = snv_def_calls[0]
 
-snv_def_alleles = snv_def_calls[1]
+print("\nCandidate alleles:")
+print(snv_cand_alleles)
+
+
+snv_def_alleles = snv_def_calls[-1]
 
 dip_variants = get_all_vars_gt(infile_full_gt)
 
 
-cn = get_total_CN(cov_file)[0]
+print("\nResult:")
+
+
+# cn = get_total_CN(cov_file)[0]
 av_cov = get_total_CN(cov_file)[3]
 cn_in1_3pr = get_total_CN(cov_file)[2]
 cn_ex9_3pr = get_total_CN(cov_file)[4]
 in1_3pr_float = get_total_CN(cov_file)[5]
 
+cov_in4_3pr = get_total_CN(cov_file)[6]
+cov_5pr_in4 = get_total_CN(cov_file)[7]
+cn_2d7_ex9 = get_total_CN(cov_file)[8]
+cn_2d7_in4_in8 = get_total_CN(cov_file)[9]
+
+
+
+
 if snv_def_alleles != '*2/*2':
     in_list = dup_test_init(sv_dup, av_cov)
 
-
-print("CN = {}".format(cn))
 
 
 if cn == '2' and snv_def_alleles == '*4/*4':
@@ -61,8 +87,33 @@ if cn == '2' and snv_def_alleles == '*4/*4':
 
     print("\n" + snv_def_alleles)
 
-elif cn == '2':    
-    print("\n" + snv_def_alleles)
+
+
+elif cn == '2':
+    if 'or' in snv_def_alleles:
+        print ("\n")
+        print (snv_def_alleles)
+    else:
+        snv_def_alleles = snv_def_alleles.split("/")
+
+        if snv_def_alleles[0] == '*2' or snv_def_alleles[1] == '*2':
+            ind_star2 = snv_def_alleles.index('*2')
+            ind_other = 1 - ind_star2
+
+            test_13_v2 = hybrid_13_test1(cov_in4_3pr, cov_5pr_in4)
+
+            if test_13_v2 == 'norm_var':
+                print("\n")
+                print("/".join(snv_def_alleles))
+
+            elif test_13_v2 == 'hyb_13_2':
+                print("\n")
+                print(snv_def_alleles[ind_other] + "/" + "*13+*2")
+
+        else:
+            print("\n")
+            print("/".join(snv_def_alleles))
+
 
 elif cn == '0':
     del_confirm = del_test(sv_del)
@@ -73,13 +124,11 @@ elif cn == '0':
         print ("\n" + del_confirm + "/" + "*other")
 
     else:
-        print ("*5/*5 (low conf)")
+        print ("*5/*5")
         
 elif cn == '1':
     del_confirm = del_test(sv_del)
-    # if "or" in snv_def_alleles and del_confirm != "None":
-    #     print ("\n" + snv_def_alleles + "\n" + "CYP2D6 gene deletion (*5) present")
-
+ 
     if "or" in snv_def_alleles and del_confirm == None:
         print ("\n")
         print (snv_def_alleles + "\t" + "Possible CYP2D6 gene deletion (*5) present")
@@ -90,13 +139,13 @@ elif cn == '1':
 
         if snv_def_alleles[0] == snv_def_alleles[1]:
             print ("\n")
-            print (snv_def_alleles[0] + "/" + "*5" + " (low conf)")
+            print (snv_def_alleles[0] + "/" + "*5")
 
         elif snv_def_alleles[0] != snv_def_alleles[1]:
             samp_allele1 = del_adv_test(hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], supp_core_vars)
             # print(samp_allele1)                                                                                                                         
             print ("\n")
-            print (samp_allele1 + "/" + "*5" + " (low conf)")
+            print (samp_allele1 + "/" + "*5")
 
     else:
         snv_def_alleles = snv_def_alleles.split("/")
@@ -104,11 +153,15 @@ elif cn == '1':
 
         if snv_def_alleles[0] == snv_def_alleles[1]:
             print ("\n")
+            if del_confirm == "*5/*5":
+                del_confirm = "*5"
             print (del_confirm + "/" + snv_def_alleles[0])
 
         elif snv_def_alleles[0] != snv_def_alleles[1]:
             samp_allele1 = del_adv_test(hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], supp_core_vars)
             print ("\n")
+            if del_confirm == "*5/*5":
+                del_confirm = "*5"
             print (del_confirm + "/" + samp_allele1)
 
 
@@ -125,12 +178,41 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
     else:
         snv_def_alleles = snv_def_alleles.split("/") 
         snv_cand_alleles = snv_cand_alleles.split("_")
+
+
+        if snv_def_alleles[0] == '*90' or snv_def_alleles[1] == '*90':
+            
+            alt_allele_ind = 1 - snv_def_alleles.index('*90')
+            alt_allele = snv_def_alleles[alt_allele_ind]
+            sp_allele = tandem_90_1(in_list, alt_allele, cn)
+            
+
+            sp_allele1 = sp_allele.split("/")
+
+
+            if "*10x2" in sp_allele1:
+
+                test_36 = hybrid_test_36(sv_dup, cn, av_cov, cn_ex9_3pr, cn_2d7_ex9, cn_2d7_in4_in8)
+
+                if test_36 == 'norm_dup':
+                    pass
+
+                elif test_36 == 'hyb_36_10':
+                    sp_allele = sp_allele.replace('*10x2', '*36+*10')
+
+                elif test_36 == 'hyb_36_36':
+                    sp_allele = sp_allele.replace('*10x2', '*36x2')
+
+            print(sp_allele)
+
         
-        if snv_def_alleles[0] != snv_def_alleles[1]:
+        elif snv_def_alleles[0] != snv_def_alleles[1]:
             #print("\n" + dup_test(sv_dup, hap_dbs, snv_def_alleles[0], snv_def_alleles[1], cn))
-            print (snv_def_alleles)
+            #print (snv_cand_alleles)
             print ("\n")
             phased_dup = dup_test_cn_3_4(sv_dup, hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], cn, av_cov, in_list)
+
+           # print (phased_dup)
             
             phased_dup1 = phased_dup.split("/")
 
@@ -145,6 +227,7 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
                 if count1 == 1:
 
                     test_68 = hybrid_test_68(sv_dup, cn, av_cov, cn_in1_3pr, in_list)
+                    
 
                     if test_68 == 'norm_dup':
                         pass
@@ -271,7 +354,23 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
             print(phased_dup)
 
 
+
+
+elif int(cn) > 4 and snv_def_alleles != None:
+
+    if "or" in snv_def_alleles:
+        print ("\n" + snv_def_alleles + "\t" + "Duplication present")
+
+    else:
+        snv_def_alleles = snv_def_alleles.split("/")
+        snv_cand_alleles = snv_cand_alleles.split("_")
+
+        phased_dup = dup_test_cn_n(sv_dup, hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], cn, av_cov, in_list)
+
+        print(phased_dup)
+
+
+
 elif int(cn) > 2 and snv_def_alleles == None:
     
-    print("Possible CYP2D6/2D7 hybrid present")
-
+    print("Possible rare CYP2D6/2D7 hybrid present")

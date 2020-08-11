@@ -12,6 +12,7 @@ if (params.build=='b37') {
     region_a2 = "042522000-042542000"
     region_b1 = "22:42522300-42528400"
     region_b2 = "042522300-042528400"
+    debug37 = "--minimum_extract_score_over_homref=0"
     debug38 = ""
 
 
@@ -24,6 +25,7 @@ if (params.build=='b37') {
     region_a2 = "042522000-042542000"
     region_b1 = "chr22:42522300-42528400"
     region_b2 = "042522300-042528400"
+    debug37 = "--minimum_extract_score_over_homref=0"
     debug38 = ""
 
 
@@ -36,6 +38,7 @@ if (params.build=='b37') {
     region_a2 = "042126000-042137500"
     region_b1 = "chr22:42126300-42132400"
     region_b2 = "042126300-042132400" 
+    debug37 = ""
     debug38 = "--minimum_extract_score_over_homref=0"
 }
 
@@ -105,7 +108,7 @@ process call_snvs1 {
       
    script:
     """
-   	graphtyper genotype ${ref_dir}/${ref_genome} --sam=${name}.${ext} --region=${region_a1} --output=${name}_var_1 --prior_vcf=${res_dir}/common_plus_core_var.vcf.gz -a ${debug38} ${cram_options}
+   	graphtyper genotype ${ref_dir}/${ref_genome} --sam=${name}.${ext} --region=${region_a1} --output=${name}_var_1 --prior_vcf=${res_dir}/common_plus_core_var.vcf.gz -a ${debug38} ${cram_options} 
     """
 
 }
@@ -123,7 +126,7 @@ process call_snvs2 {
 
    script:
     """  
-	graphtyper genotype ${ref_dir}/${ref_genome} --sam=${name}.${ext} --region=${region_a1} --output=${name}_var_2 -a ${debug38} ${cram_options}
+	graphtyper genotype ${ref_dir}/${ref_genome} --sam=${name}.${ext} --region=${region_a1} --output=${name}_var_2 -a ${debug38} ${debug37} ${cram_options}  
     """
 
 }

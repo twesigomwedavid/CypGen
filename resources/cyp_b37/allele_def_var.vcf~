@@ -1,0 +1,212 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20200214
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000192.1,length=547496>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=NC_007605,length=171823>
+##description="CYP2D6 NC_000022.10 all_core_var"
+##version=4.1.4
+##bcftools_mergeVersion=1.9+htslib-1.9
+##bcftools_mergeCommand=merge -m none -o allele_def_var.vcf CYP2D6_100.v1.vcf.gz CYP2D6_101.v1.vcf.gz CYP2D6_102.v1.vcf.gz CYP2D6_103.v1.vcf.gz CYP2D6_104.v1.vcf.gz CYP2D6_105.v1.vcf.gz CYP2D6_106.v1.vcf.gz CYP2D6_107.v1.vcf.gz CYP2D6_108.v1.vcf.gz CYP2D6_109.v1.vcf.gz CYP2D6_10.v1.vcf.gz CYP2D6_110.v1.vcf.gz CYP2D6_111.v1.vcf.gz CYP2D6_112.v1.vcf.gz CYP2D6_113.v1.vcf.gz CYP2D6_114.v1.vcf.gz CYP2D6_115.v1.vcf.gz CYP2D6_116.v1.vcf.gz CYP2D6_117.v1.vcf.gz CYP2D6_118.v1.vcf.gz CYP2D6_119.v1.vcf.gz CYP2D6_11.v1.vcf.gz CYP2D6_120.v1.vcf.gz CYP2D6_121.v1.vcf.gz CYP2D6_122.v1.vcf.gz CYP2D6_123.v1.vcf.gz CYP2D6_124.v1.vcf.gz CYP2D6_125.v1.vcf.gz CYP2D6_126.v1.vcf.gz CYP2D6_127.v1.vcf.gz CYP2D6_128.v1.vcf.gz CYP2D6_129.v1.vcf.gz CYP2D6_12.v1.vcf.gz CYP2D6_12.v2.vcf.gz CYP2D6_130.v1.vcf.gz CYP2D6_131.v1.vcf.gz CYP2D6_132.v1.vcf.gz CYP2D6_133.v1.vcf.gz CYP2D6_134.v1.vcf.gz CYP2D6_135.v1.vcf.gz CYP2D6_136.v1.vcf.gz CYP2D6_137.v1.vcf.gz CYP2D6_138.v1.vcf.gz CYP2D6_139.v1.vcf.gz CYP2D6_14.v1.vcf.gz CYP2D6_15.v1.vcf.gz CYP2D6_15.v2.vcf.gz CYP2D6_17.v1.vcf.gz CYP2D6_18.v1.vcf.gz CYP2D6_19.v1.vcf.gz CYP2D6_1.v1.vcf.gz CYP2D6_20.v1.vcf.gz CYP2D6_21.v1.vcf.gz CYP2D6_22.v1.vcf.gz CYP2D6_23.v1.vcf.gz CYP2D6_24.v1.vcf.gz CYP2D6_25.v1.vcf.gz CYP2D6_26.v1.vcf.gz CYP2D6_27.v1.vcf.gz CYP2D6_28.v1.vcf.gz CYP2D6_29.v1.vcf.gz CYP2D6_2.v1.vcf.gz CYP2D6_30.v1.vcf.gz CYP2D6_31.v1.vcf.gz CYP2D6_32.v1.vcf.gz CYP2D6_33.v1.vcf.gz CYP2D6_34.v1.vcf.gz CYP2D6_35.v1.vcf.gz CYP2D6_37.v1.vcf.gz CYP2D6_38.v1.vcf.gz CYP2D6_39.v1.vcf.gz CYP2D6_3.v1.vcf.gz CYP2D6_3.v2.vcf.gz CYP2D6_40.v1.vcf.gz CYP2D6_41.v1.vcf.gz CYP2D6_42.v1.vcf.gz CYP2D6_43.v1.vcf.gz CYP2D6_44.v1.vcf.gz CYP2D6_45.v1.vcf.gz CYP2D6_46.v1.vcf.gz CYP2D6_47.v1.vcf.gz CYP2D6_48.v1.vcf.gz CYP2D6_49.v1.vcf.gz CYP2D6_4.v1.vcf.gz CYP2D6_4.v2.vcf.gz CYP2D6_4.v3.vcf.gz CYP2D6_4.v4.vcf.gz CYP2D6_4.v5.vcf.gz CYP2D6_4.v6.vcf.gz CYP2D6_4.v7.vcf.gz CYP2D6_4.v8.vcf.gz CYP2D6_4.v9.vcf.gz CYP2D6_50.v1.vcf.gz CYP2D6_51.v1.vcf.gz CYP2D6_52.v1.vcf.gz CYP2D6_53.v1.vcf.gz CYP2D6_54.v1.vcf.gz CYP2D6_55.v1.vcf.gz CYP2D6_56.v1.vcf.gz CYP2D6_56.v2.vcf.gz CYP2D6_58.v1.vcf.gz CYP2D6_59.v1.vcf.gz CYP2D6_60.v1.vcf.gz CYP2D6_62.v1.vcf.gz CYP2D6_64.v1.vcf.gz CYP2D6_65.v1.vcf.gz CYP2D6_69.v1.vcf.gz CYP2D6_6.v1.vcf.gz CYP2D6_6.v2.vcf.gz CYP2D6_70.v1.vcf.gz CYP2D6_71.v1.vcf.gz CYP2D6_72.v1.vcf.gz CYP2D6_73.v1.vcf.gz CYP2D6_74.v1.vcf.gz CYP2D6_75.v1.vcf.gz CYP2D6_7.v1.vcf.gz CYP2D6_81.v1.vcf.gz CYP2D6_82.v1.vcf.gz CYP2D6_84.v1.vcf.gz CYP2D6_85.v1.vcf.gz CYP2D6_86.v1.vcf.gz CYP2D6_87.v1.vcf.gz CYP2D6_88.v1.vcf.gz CYP2D6_89.v1.vcf.gz CYP2D6_8.v1.vcf.gz CYP2D6_90.v1.vcf.gz CYP2D6_91.v1.vcf.gz CYP2D6_92.v1.vcf.gz CYP2D6_93.v1.vcf.gz CYP2D6_94.v1.vcf.gz CYP2D6_95.v1.vcf.gz CYP2D6_96.v1.vcf.gz CYP2D6_97.v1.vcf.gz CYP2D6_98.v1.vcf.gz CYP2D6_99.v1.vcf.gz CYP2D6_9.v1.vcf.gz; Date=Mon Apr 20 12:10:50 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+22	42522580	rs1440526469	C	T	.	.	.
+22	42522607	rs568495591	G	A	.	.	.
+22	42522613	rs1135840	G	C	.	.	.
+22	42522636	.	A	C	.	.	.
+22	42522649	rs141756339	C	T	.	.	.
+22	42522658	.	C	CCAGTGGGCA	.	.	.
+22	42522683	.	G	C	.	.	.
+22	42522699	.	G	T	.	.	.
+22	42522721	rs369177208	C	T	.	.	.
+22	42522724	rs79392742	G	T	.	.	.
+22	42522737	rs751092905	C	T	.	.	.
+22	42522748	rs532668079	C	T	.	.	.
+22	42522749	rs730882251	G	A	.	.	.
+22	42522751	rs267608319	C	T	.	.	.
+22	42522754	rs569439709	C	T	.	.	.
+22	42522879	rs3021084	G	A	.	.	.
+22	42522898	rs763964554	G	A	.	.	.
+22	42522916	rs28371733	C	T	.	.	.
+22	42522928	rs747089665	G	A	.	.	.
+22	42522940	rs769157652	C	T	.	.	.
+22	42522958	.	T	G	.	.	.
+22	42522983	.	G	GGA	.	.	.
+22	42523459	rs77312092	C	T	.	.	.
+22	42523475	rs75386357	C	T	.	.	.
+22	42523514	rs61745683	C	T	.	.	.
+22	42523516	.	A	G	.	.	.
+22	42523525	rs1555888910	A	G	.	.	.
+22	42523528	rs1058172	C	T	.	.	.
+22	42523532	rs72549346	G	GCA	.	.	.
+22	42523558	rs202102799	T	C	.	.	.
+22	42523567	rs61736517	T	C	.	.	.
+22	42523591	rs76088846	C	T	.	.	.
+22	42523592	rs72549347	G	A	.	.	.
+22	42523595	rs267608295	G	C	.	.	.
+22	42523604	.	C	T	.	.	.
+22	42523610	rs59421388	C	T	.	.	.
+22	42523612	rs748712690	T	C	.	.	.
+22	42523613	rs78209835	C	T	.	.	.
+22	42523621	rs72549348	T	G	.	.	.
+22	42523633	rs141009491	C	G	.	.	.
+22	42523805	rs28371725	C	T	.	.	.
+22	42523843	rs72549349	C	G	.	.	.
+22	42523847	rs730882170	GCACATCCGGATGTAGGATC	G	.	.	.
+22	42523854	rs79292917	C	T	.	.	.
+22	42523855	rs140513104	G	A	.	.	.
+22	42523858	rs5030867	T	G	.	.	.
+22	42523901	.	T	C	.	.	.
+22	42523924	rs1406719554	A	G	.	.	.
+22	42523940	rs949717872	T	G	.	.	.
+22	42523943	rs16947	A	G	.	.	.
+22	42523964	rs267608279	TG	T	.	.	.
+22	42523975	rs1135829	T	C	.	.	.
+22	42524175	rs5030656	CCTT	C	.	.	.
+22	42524183	rs1135828	A	T	.	.	.
+22	42524187	rs77913725	C	T	.	.	.
+22	42524200	rs72549351	CTCAG	C	.	.	.
+22	42524213	rs565013903	C	T	.	.	.
+22	42524213	rs72549352	C	CG	.	.	.
+22	42524214	rs367543000	G	A	.	.	.
+22	42524219	rs148769737	G	T	.	.	.
+22	42524237	rs267608297	G	A	.	.	.
+22	42524243	rs35742686	CT	C	.	.	.
+22	42524250	rs72549353	CAGTT	C	.	.	.
+22	42524274	.	T	G	.	.	.
+22	42524310	rs28371717	C	A	.	.	.
+22	42524327	rs17002853	A	G	.	.	.
+22	42524797	.	AG	A	.	.	.
+22	42524813	rs72549354	C	CG	.	.	.
+22	42524850	rs745365204	C	T	.	.	.
+22	42524880	.	C	A	.	.	.
+22	42524881	.	A	G	.	.	.
+22	42524905	.	T	TTA	.	.	.
+22	42524929	rs72549356	A	AGGGGCGAAA	.	.	.
+22	42524929	rs72549356	A	AGGGGCGAAAGGGGCGAAA	.	.	.
+22	42524947	rs3892097	C	T	.	.	.
+22	42525035	rs5030865	C	T	.	.	.
+22	42525035	rs5030865	C	A	.	.	.
+22	42525038	rs1135826	A	C	.	.	.
+22	42525039	rs1135825	G	T	.	.	.
+22	42525044	rs1135824	T	C	.	.	.
+22	42525058	.	C	G	.	.	.
+22	42525073	.	T	A	.	.	.
+22	42525073	rs267608302	T	G	.	.	.
+22	42525077	rs28371710	C	T	.	.	.
+22	42525085	rs5030655	CA	C	.	.	.
+22	42525089	rs78482768	G	C	.	.	.
+22	42525100	rs569229126	T	C	.	.	.
+22	42525115	rs375135093	A	G	.	.	.
+22	42525134	rs61736512	C	T	.	.	.
+22	42525136	rs781457579	G	A	.	.	.
+22	42525157	rs1180015037	C	T	.	.	.
+22	42525176	rs1135823	C	A	.	.	.
+22	42525182	rs1135822	A	T	.	.	.
+22	42525185	rs374616348	C	T	.	.	.
+22	42525761	rs535642512	C	T	.	.	.
+22	42525767	rs78459009	T	C	.	.	.
+22	42525772	rs28371706	G	A	.	.	.
+22	42525772	rs28371706	G	T	.	.	.
+22	42525773	rs74802369	T	A	.	.	.
+22	42525781	rs76187628	A	G	.	.	.
+22	42525782	rs267608308	C	T	.	.	.
+22	42525811	rs28371704	T	C	.	.	.
+22	42525821	rs28371703	G	T	.	.	.
+22	42525823	rs267608309	G	A	.	.	.
+22	42525829	rs267608276	C	G	.	.	.
+22	42525838	rs267608310	G	A	.	.	.
+22	42525889	.	A	G	.	.	.
+22	42525912	rs201377835	C	G	.	.	.
+22	42526656	rs774671100	C	CA	.	.	.
+22	42526669	rs118203758	C	T	.	.	.
+22	42526670	rs5030862	C	T	.	.	.
+22	42526694	rs1065852	G	A	.	.	.
+22	42526712	rs138100349	G	A	.	.	.
+22	42526717	rs28371696	C	T	.	.	.
+22	42526721	rs267608313	G	A	.	.	.
+22	42526729	.	AG	A	.	.	.
+22	42526763	rs769258	C	T	.	.	.
+22	42526775	rs72549358	C	T	.	.	.
+22	42526780	rs773790593	G	A	.	.	.
