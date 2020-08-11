@@ -68,7 +68,10 @@ The following steps assume that;
     ii. Nextflow and Singularity are already installed
 
 
-##### For execution on local machine or single cluster node
+Quick note: If you are running this test on a Mac running `Singularity desktop for MacOS`, please comment out the `runOptions` under Singularity in the `nextflow.config` file using the "//" sign.  
+
+
+##### For execution on a local machine or single cluster node
 
 ```bash
 nextflow run main.nf -profile standard,test
