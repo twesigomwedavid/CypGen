@@ -1,11 +1,12 @@
 # CypGen
 Calling human cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
-Model gene: CYP2D6 (Support for more CYP genes to be added soon)
+Model gene: CYP2D6 (Support for more CYP450 genes to be added soon)
 
 CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
 
 Maintainer: David Twesigomwe (twesigomwedavid@gmail.com)
+
 
 ## Getting started
 
@@ -15,7 +16,9 @@ The following are required to run the CypGen pipeline;
     - [`Nextflow`](https://nf-co.re/usage/installation) (preferably v18.x or higher)
     - [`Singularity`](https://sylabs.io/) (v2.3.x or higher) or [`Docker`](https://docs.docker.com)
     
-Singularity is highly recommended especially for running the pipeline in an HPC environment running Linux OS. Docker desktop is recommended for MacOS users intending to run the pipeline on a local machine.
+Singularity is highly recommended especially for running the pipeline in an HPC environment running Linux OS. Docker desktop is recommended for MacOS users intending to run/test the pipeline on a local machine. If you're just using your Mac to connect to a Linux cluster environment, then you can just proceed with Singularity on the cluster as the default.
+
+
 
 2. Whole genome sequence (WGS) data
     - Indexed BAM/CRAM files
@@ -24,6 +27,7 @@ Singularity is highly recommended especially for running the pipeline in an HPC 
     - hg19, b37, or hg38
     
 Note: For a full description of the differences among reference genomes, please check out this [`Documentation`](https://gatk.broadinstitute.org/hc/en-us/articles/360035890711-GRCh37-hg19-b37-humanG1Kv37-Human-Reference-Discrepancies) by the GATK team. For the purpose of using this pipeline, if the GRCh37 reference genome you are using has contigs that start with 'chr' (i.e. chr1, chr2, ..., chrX, chrM, ...), use the hg19 option. You should use the b37 option if the contigs in the GRCh37 reference genome do not have 'chr' (i.e. 1, 2, ..., X, MT). For GRCh38, the hg38 option is sufficient.
+
 
 ### Installation
 
@@ -61,14 +65,12 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
 
 
-## Running CypGen on the provided test dataset(s) - using Singularity
+## Running CypGen on the provided test dataset(s) - using Singularity (optimal for Linux/Unix HPC cluster environments)
 
 The following steps assume that;
     i. CypGen is your current working directory
     ii. Nextflow and Singularity are already installed
 
-
-Quick note: If you are running this test on a Mac running `Singularity desktop for MacOS`, please comment out the `runOptions` under Singularity in the `nextflow.config` file using the "//" sign.  
 
 
 ##### For execution on a local machine or single cluster node
@@ -95,7 +97,7 @@ CYP2D6 Star Allele Calling with CypGen
 
 --------------------------------------------
 
-CN = 2
+Initially computed CN = 2
 
 
 Core variants:
@@ -112,14 +114,78 @@ Result:
 ```
 
 
-## Running CypGen on your project data - using Singularity
+
+## Running CypGen on the provided test dataset(s) - using Docker
+
+At the moment, only Docker Desktop on MacOS has been tested. The following steps assume that you have already installed Docker Desktop on your Mac as indicated above.
+
+
+### Step 1 - Pull the Docker container
+
+Pull the `cypgen-dev` container from Docker hub by running the command below:
+
+```bash
+docker pull twesigomwedavid/cypgen-dev:latest
+```
+
+### Step 2 - Disable Singlularity(default) and enable Docker instead in the `nextflow.config` file
+
+
+Enabling Docker in the nextflow.config file:
+
+```bash
+docker {
+    enabled = true
+    runOptions = '-u \$(id -u):\$(id -g)'
+  }
+```
+
+Disabling Singularity in the nextflow.config file:
+
+```bash
+singularity {
+    enabled = false
+    autoMounts = true
+    cacheDir = "$PWD/containers"
+  }
+```
+
+
+Additionally, comment out the Singularity container variable (default) and set the variable `container` to point to the docker image instead i.e.
+
+```bash
+
+// container = "$PWD/containers/cypgen-dev.sif"  // this is to take the Singularity container out of the equation
+
+container = "twesigomwedavid/cypgen-dev:latest" // this to set the container path to the Docker image containing all the dependencies that CypGen requires
+```
+
+
+##### Execution on a local machine (assumes that you're running Docker Desktop for MacOS)
+
+```bash
+nextflow run main.nf -profile standard,test
+```
+
+
+#### Expected output
+Similar to Singularity run.
+
+
+
+## Running CypGen on your project data
 
 Once again, the following steps assume that;
     i. CypGen is your current working directory
-    ii. Nextflow and Singularity are already installed
+    ii. Nextflow and Singularity or Docker are already installed
     
+
+### Step 1 - Singularity vs Docker
+Follow the aforementioned guidelines to decide between either Singularity or Docker. To reiterate, we recommend Docker for MacOS Desktop users. Singularity (default) is ideal for running CypGen on HPC cluster/server environments running Linux OS and also for Linux local machines.
+
+
     
-### Step 1 - Set the input paths in the nextflow.config file
+### Step 2 - Set the input paths in the nextflow.config file
 
 Set the parameters for your input data (`in_bam`) and the reference genome (`ref_file`) in the nextflow.config file following the syntax described therein. 
 
@@ -160,7 +226,7 @@ Optionally, you may set the `out_dir` to a path of choice. The default output fo
 
 
 
-### Step 2 - Run the pipeline (Default is for GRCh38 aligned data)
+### Step 3 - Run the pipeline (Default is for GRCh38 aligned data)
 
 For execution on a local machine
 
@@ -198,39 +264,12 @@ nextflow run main.nf -profile [standard/slurm etc] --build hg19
 ```
 
 
-### Step 3 - Results
+### Step 4 - Results
 
-See result files matching each sample in the `./results` folder or custom predefined path!
-
-
-
-## Running CypGen using Docker
-
-At the moment, only Docker Desktop on MacOS has been tested. The following steps assume that you have already installed Docker Desktop on your Mac as indicated above.
+See result files matching each sample in the `./results` folder or custom predefined path.
 
 
-### Step 1 - Pull Docker container
 
-Pull the `cypgen-dev` Docker container by running the command below:
+Thank you for choosing CypGen!
 
-```bash
-docker pull twesigomwedavid/cypgen-dev:latest
-```
-
-### Step 1 - Set the input paths in the nextflow.config file
-
-Follow the steps described above regarding setting the input paths for the WGS BAM/CRAM files as well as the reference genome. 
-
-The only exta modification required is commenting out the Singularity container variable (default) and instead setting the variable `container` to point to the docker image i.e.
-
-```bash
-container = "twesigomwedavid/cypgen-dev:latest"
-```
-
-See nextflow.config file
-
-
-### Step 2 and 3 - Running the pipeline and obtaining results
-
-Follow similar steps as with Singularity!
 
