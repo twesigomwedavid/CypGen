@@ -65,7 +65,7 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
 
 
-## Running CypGen on the provided test dataset(s) - using Singularity (optimal for Linux/Unix HPC cluster environments)
+## Running CypGen on the provided test dataset(s) - using Singularity
 
 The following steps assume that;
     i. CypGen is your current working directory
