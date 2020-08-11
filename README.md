@@ -65,13 +65,18 @@ git clone https://github.com/twesigomwedavid/CypGen.git && cd CypGen
 ```
 
 
-## Running CypGen on the provided test dataset(s) - using Singularity
+## Running CypGen on the provided test dataset(s) - using Singularity (default)
 
 The following steps assume that;
     i. CypGen is your current working directory
     ii. Nextflow and Singularity are already installed
 
 
+### Step 1 - Parameters
+The parameters for Singularity are set as default so no need to change anything.
+
+
+### Step 2 - Execution of the pipeline
 
 ##### For execution on a local machine or single cluster node
 
@@ -86,7 +91,7 @@ nextflow run main.nf -profile slurm,test
 ```
 
 
-#### Expected output
+### Step 3 - Expected output
 
 The expected output file (SIM001_2d6.alleles) for test dataset SIM001.bam will be found in the `./results` directory. It should contain the following; 
 
@@ -161,14 +166,15 @@ container = "twesigomwedavid/cypgen-dev:latest" // this to set the container pat
 ```
 
 
-##### Execution on a local machine (assumes that you're running Docker Desktop for MacOS)
+### Step 3 - Execution on a local machine 
+(Assumes that you're running Docker Desktop for MacOS)
 
 ```bash
 nextflow run main.nf -profile standard,test
 ```
 
 
-#### Expected output
+### Step 4 - Expected output
 Similar to Singularity run.
 
 
