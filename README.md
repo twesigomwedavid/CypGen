@@ -71,13 +71,13 @@ The following steps assume that;
 ##### For execution on local machine or single cluster node
 
 ```bash
-nextflow run main.nf -profile standard -c tests/config/test.config
+nextflow run main.nf -profile standard,test
 ```
 
 ##### For execution on SLURM scheduler 
 
 ```bash
-nextflow run main.nf -profile slurm -c tests/config/test.config
+nextflow run main.nf -profile slurm,test
 ```
 
 
@@ -104,8 +104,6 @@ Candidate alleles:
 
 
 Result:
-
-
 *17/*29
 
 ```
@@ -128,7 +126,7 @@ For single sample:
 in_bam = "/path/to/Sample*{bam,bai}"
 ```
 
-For all samples stored in the same directory (Advisable to create symlinks in a common directory if the samples are stored in different directories):
+For all samples stored in the same directory (Advisable to create symlinks in the `data` directory if the samples are stored in various directories):
 
 ```bash
 in_bam = "/path/to/*{bam,bai}"
@@ -143,7 +141,7 @@ in_bam = "/path/to/HG*{bam,bai}"
 For CRAM input:
 
 ```bash
-in_bam = "/path/to/Sample*{cram,crai}"
+in_bam = "/path/to/samples/*{cram,crai}"
 ```
 
 For reference genome:
@@ -154,7 +152,7 @@ ref_file = "/path/to/reference/genome.fasta"
 
 Results directory:
 
-Optionally, you may set the `out_dir` to a path of choice. Default is `./results` under the CypGen directory. 
+Optionally, you may set the `out_dir` to a path of choice. The default output folder is `./results` under the CypGen directory. 
 
 
 
