@@ -116,6 +116,14 @@ Candidate alleles:
 Result:
 *17/*29
 
+
+Activity score:
+1.0
+
+
+Metaboliser status:
+Intermediate metaboliser (IM)
+
 ```
 
 

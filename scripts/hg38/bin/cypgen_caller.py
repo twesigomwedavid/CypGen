@@ -19,10 +19,9 @@ infile_full_gt = sys.argv[4]
 infile_spec = sys.argv[5]
 sv_del = sys.argv[6]
 sv_dup = sys.argv[7]
-#core_var_sum = sys.argv[8]
 cov_file = sys.argv[8]
 hap_dbs = sys.argv[9]
-
+act_score = sys.argv[10]
 
 
 
@@ -68,6 +67,10 @@ cn_2d7_ex9 = get_total_CN(cov_file)[8]
 cn_2d7_in4_in8 = get_total_CN(cov_file)[9]
 
 
+
+gene_alleles = ""
+
+
 if snv_def_alleles != '*1/*1':
     in_list = dup_test_init(sv_dup, av_cov)
 
@@ -81,7 +84,8 @@ if cn == '2' and snv_def_alleles == '*4/*4':
     elif test_68 == 'del_hyb':
         snv_def_alleles = (snv_def_alleles.replace('*4', '*5', 1)).replace('*4', '*68+*4')
 
-    print("\n" + snv_def_alleles)
+    gene_alleles = snv_def_alleles
+    print(gene_alleles)
 
 elif cn == '2':
     # print(snv_def_alleles)
@@ -99,28 +103,34 @@ elif cn == '2':
 
             if test_13_v2 == 'norm_var':
                # print("\n")
-                print("/".join(snv_def_alleles))
+                gene_alleles = "/".join(snv_def_alleles)
+                print(gene_alleles)
 
             elif test_13_v2 == 'hyb_13_2':
                # print("\n")
-                print(snv_def_alleles[ind_other] + "/" + "*13+*2")
+                gene_alleles = snv_def_alleles[ind_other] + "/" + "*13+*2"
+                print(gene_alleles)
 
         else:
            # print("\n")
-            print("/".join(snv_def_alleles))
+            gene_alleles = "/".join(snv_def_alleles)
+            print(gene_alleles)
 
 
 elif cn == '0':
     del_confirm = del_test(sv_del)
     if del_confirm == '*5/*5':
-        print ("\n" + del_confirm)
+        gene_alleles = del_confirm
+        print(gene_alleles)
 
     elif del_confirm == '*5':
-        print ("\n" + del_confirm + "/" + "*other")
+        samp_dip = del_confirm + "/" + "*other"
+        print(samp_dip)
 
     else:
        # print ("\n")
-        print ("*5/*5")
+        gene_alleles = "*5/*5" 
+        print (gene_alleles)
         
 elif cn == '1':
     del_confirm = del_test(sv_del)
@@ -135,13 +145,15 @@ elif cn == '1':
 
         if snv_def_alleles[0] == snv_def_alleles[1]:
            # print ("\n")
-            print (snv_def_alleles[0] + "/" + "*5") 
+            gene_alleles = snv_def_alleles[0] + "/" + "*5"
+            print(gene_alleles)
             
         elif snv_def_alleles[0] != snv_def_alleles[1]:
             samp_allele1 = del_adv_test(hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], supp_core_vars)
             # print(samp_allele1)
-            print ("\n")
-            print (samp_allele1 + "/" + "*5")
+            # print ("\n")
+            gene_alleles = samp_allele1 + "/" + "*5"
+            print(gene_alleles)
 
     else:
         snv_def_alleles = snv_def_alleles.split("/")
@@ -149,19 +161,20 @@ elif cn == '1':
 
         if snv_def_alleles[0] == snv_def_alleles[1]:
            # print ("\n")
-            print (del_confirm + "/" + snv_def_alleles[0])
+            gene_alleles = (del_confirm + "/" + snv_def_alleles[0])
+            print(gene_alleles)
 
         elif snv_def_alleles[0] != snv_def_alleles[1]:
             samp_allele1 = del_adv_test(hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], supp_core_vars)
            # print ("\n")
-            print (del_confirm + "/" + samp_allele1)
-
+            gene_alleles = (del_confirm + "/" + samp_allele1)
+            print(gene_alleles)
 
 elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
 
     orig = snv_def_alleles
     if "or" in snv_def_alleles:
-        print ("\n" + snv_def_alleles + "\t" + "Duplication present")
+        print (snv_def_alleles + "\t" + "Duplication present")
 
     else:
         snv_def_alleles = snv_def_alleles.split("/") 
@@ -190,7 +203,8 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
                 elif test_36 == 'hyb_36_36':
                     sp_allele = sp_allele.replace('*10x2', '*36x2')
 
-            print(sp_allele)
+            gene_alleles = sp_allele
+            print(gene_alleles)
 
         
         elif snv_def_alleles[0] != snv_def_alleles[1]:
@@ -265,7 +279,8 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
                     elif test_36 == 'hyb_36_36':
                         phased_dup = phased_dup.replace('*10x3', '*36x2+*10')
 
-            print(phased_dup)
+            gene_alleles = phased_dup
+            print(gene_alleles)
 
 
         elif snv_def_alleles[0] == snv_def_alleles[1]:
@@ -334,14 +349,14 @@ elif (int(cn) == 3 or int(cn) == 4) and snv_def_alleles != None:
                     elif test_36 == 'hyb_36_36':
                         phased_dup = '*36+*10/*36+*10'               
 
-            print(phased_dup)
-
+            gene_alleles = phased_dup
+            print(gene_alleles)
 
 
 elif int(cn) > 4 and snv_def_alleles != None:
 
     if "or" in snv_def_alleles:
-        print ("\n" + snv_def_alleles + "\t" + "Duplication present")
+        print (snv_def_alleles + "\t" + "Duplication present")
 
     else:
         snv_def_alleles = snv_def_alleles.split("/")
@@ -349,11 +364,88 @@ elif int(cn) > 4 and snv_def_alleles != None:
 
         phased_dup = dup_test_cn_n(sv_dup, hap_dbs, snv_cand_alleles[0], snv_cand_alleles[1], snv_def_alleles[0], snv_def_alleles[1], cn, av_cov, in_list)
 
-        print(phased_dup)
+        gene_alleles = phased_dup
+        print(gene_alleles)
 
 
 
 elif int(cn) > 2 and snv_def_alleles == None:
-    
     print("Possible rare CYP2D6/2D7 hybrid present")
 
+
+
+print("\nActivity score:")
+
+score_list = []
+
+score_list1 = []
+score_list2 = []
+score_list3 = []
+
+allele_dict = {}
+
+def get_ac_score(act_score, star_alleles):
+    for line in open(act_score, "r"):
+        line = line.strip().split()
+        score_list.append(line)
+
+    for i in score_list:
+        allele_dict[i[0]] = i[1] 
+
+    star_alleles = star_alleles.replace("/", "+")
+    star_alleles = star_alleles.split("+")
+
+    for elem in star_alleles:
+        if "x" not in elem:
+            m_allele = elem
+            n_allele = "1"
+        elif "x" in elem:
+            index1 = elem.find("x")
+            m_allele = elem[:index1]
+            n_allele = elem[index1+1:]
+
+        p_allele = allele_dict[m_allele] + "_" + n_allele
+        p_allele = p_allele.split("_")
+        score_list1.append(p_allele)
+
+    for i in score_list1:
+        score_list2.append(i[0])
+
+    if "n" in score_list2:
+        return "Indeterminate"
+
+    else:
+        for i in score_list1:
+            score_list3.append(float(i[0])*float(i[1]))
+        
+        total_a_score = sum(score_list3)
+        return total_a_score
+
+
+
+if gene_alleles == "":
+    ac_score = "Indeterminate"
+    print(ac_score)
+
+
+elif gene_alleles != "":
+    ac_score = get_ac_score(act_score, gene_alleles)
+    print(ac_score)
+
+
+print("\nMetaboliser status:")
+
+if ac_score == "Indeterminate":
+    print ("Indeterminate")
+
+elif ac_score == 0:
+    print("Poor metaboliser (PM)")
+
+elif 0 < ac_score < 1.25:
+    print("Intermediate metaboliser (IM)")
+    
+elif 1.25 <= ac_score <= 2.25:
+     print("Normal metaboliser (NM)")
+
+elif ac_score > 2.25:
+    print("Ultrarapid metaboliser (UM)")

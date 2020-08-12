@@ -19,11 +19,9 @@ infile_full_gt = sys.argv[4]
 infile_spec = sys.argv[5]
 sv_del = sys.argv[6]
 sv_dup = sys.argv[7]
-# core_var_sum = sys.argv[8]
 cov_file = sys.argv[8]
 hap_dbs = sys.argv[9]
-
-#cn = get_total_CN(cov_file)
+act_score = sys.argv[10]
 
 
 cn = get_total_CN(cov_file)[0]
@@ -374,3 +372,82 @@ elif int(cn) > 4 and snv_def_alleles != None:
 elif int(cn) > 2 and snv_def_alleles == None:
     
     print("Possible rare CYP2D6/2D7 hybrid present")
+
+
+
+
+print("\nActivity score:")
+
+score_list = []
+
+score_list1 = []
+score_list2 = []
+score_list3 = []
+
+allele_dict = {}
+
+def get_ac_score(act_score, star_alleles):
+    for line in open(act_score, "r"):
+        line = line.strip().split()
+        score_list.append(line)
+
+    for i in score_list:
+        allele_dict[i[0]] = i[1]
+
+    star_alleles = star_alleles.replace("/", "+")
+    star_alleles = star_alleles.split("+")
+
+    for elem in star_alleles:
+        if "x" not in elem:
+            m_allele = elem
+            n_allele = "1"
+        elif "x" in elem:
+            index1 = elem.find("x")
+            m_allele = elem[:index1]
+            n_allele = elem[index1+1:]
+
+        p_allele = allele_dict[m_allele] + "_" + n_allele
+        p_allele = p_allele.split("_")
+        score_list1.append(p_allele)
+
+    for i in score_list1:
+        score_list2.append(i[0])
+
+    if "n" in score_list2:
+        return "Indeterminate"
+
+    else:
+        for i in score_list1:
+            score_list3.append(float(i[0])*float(i[1]))
+
+        total_a_score = sum(score_list3)
+        return total_a_score
+
+
+if gene_alleles == "":
+    ac_score = "Indeterminate"
+    print(ac_score)
+
+
+elif gene_alleles != "":
+    ac_score = get_ac_score(act_score, gene_alleles)
+    print(ac_score)
+
+
+print("\nMetaboliser status:")
+
+if ac_score == "Indeterminate":
+    print ("Indeterminate")
+
+elif ac_score == 0:
+    print("Poor metaboliser (PM)")
+
+elif 0 < ac_score < 1.25:
+    print("Intermediate metaboliser (IM)")
+
+elif 1.25 <= ac_score <= 2.25:
+     print("Normal metaboliser (NM)")
+
+elif ac_score > 2.25:
+    print("Ultrarapid metaboliser (UM)")
+

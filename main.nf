@@ -331,7 +331,7 @@ process call_stars {
    script:
    
     """
-     python3 ${caller_dir}/cypgen_caller.py ${db}/diplo_db_debugged2.dbs ${name}_vars/${name}_core_snvs.dip ${name}_vars/${name}_full.dip ${name}_vars/${name}_gt.dip ${db}/genotypes4.dbs ${name}_gene_del/${name}_gene_del_summary.txt ${name}_gene_dup/${name}_gene_dup_summary.txt ${name}_2d6_dp ${db}/haps_var_new.dbs > ${name}_2d6.alleles  
+     python3 ${caller_dir}/cypgen_caller.py ${db}/diplo_db_debugged2.dbs ${name}_vars/${name}_core_snvs.dip ${name}_vars/${name}_full.dip ${name}_vars/${name}_gt.dip ${db}/genotypes4.dbs ${name}_gene_del/${name}_gene_del_summary.txt ${name}_gene_dup/${name}_gene_dup_summary.txt ${name}_2d6_dp ${db}/haps_var_new.dbs ${db}/a_scores.dbs > ${name}_2d6.alleles  
 
     """
 
