@@ -1,7 +1,10 @@
 # CypGen
 Calling human cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
-Model gene: CYP2D6 (Support for more CYP450 genes to be added soon)
+Model gene: CYP2D6
+
+Other CYP450 genes supported: CYP2A6, CYP2B6, CYP2C19, CYP2C9, CYP2C8, CYP3A4, CYP3A5, CYP1A1, CYP1A2, CYP2E1, CYP4F2
+
 
 CypGen is built using [Nextflow](https://www.nextflow.io), a workflow management system that facilitates parallelisation, scalability, reproducibility and portability of pipelines via [`Docker`](https://docs.docker.com) and [`Singularity`](https://sylabs.io/) technologies.
 
@@ -141,7 +144,7 @@ Pull the `cypgen-dev` container from Docker hub by running the command below:
 docker pull twesigomwedavid/cypgen-dev:latest
 ```
 
-### Step 2 - Disable Singlularity(default) and enable Docker instead in the `nextflow.config` file
+### Step 2 - Disable Singlularity(default) and enable Docker instead in the nextflow.config file
 
 
 Enabling Docker in the nextflow.config file:
