@@ -1,0 +1,58 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr7,length=159345973>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="GenoType call. ./. is called if there is no coverage at the variant site.">
+##bcftools_mergeVersion=1.10.2-91-g365d117+htslib-1.10.2-106-g9c35744
+##bcftools_mergeCommand=merge -m none -Oz -o ../databases/allele_def_var.vcf.gz test1/10.v1.vcf.gz test1/11.v1.vcf.gz test1/12.v1.vcf.gz test1/13.v1.vcf.gz test1/14.v1.vcf.gz test1/15A.v1.vcf.gz test1/15B.v1.vcf.gz test1/16A.v1.vcf.gz test1/16B.v1.vcf.gz test1/17.v1.vcf.gz test1/18A.v1.vcf.gz test1/18B.v1.vcf.gz test1/19.v1.vcf.gz test1/1A.v1.vcf.gz test1/1B.v1.vcf.gz test1/1C.v1.vcf.gz test1/1D.v1.vcf.gz test1/1E.v1.vcf.gz test1/1F.v1.vcf.gz test1/1G.v1.vcf.gz test1/1H.v1.vcf.gz test1/1J.v1.vcf.gz test1/1K.v1.vcf.gz test1/1L.v1.vcf.gz test1/1M.v1.vcf.gz test1/1N.v1.vcf.gz test1/1P.v1.vcf.gz test1/1Q.v1.vcf.gz test1/1R.v1.vcf.gz test1/1S.v1.vcf.gz test1/1T.v1.vcf.gz test1/20.v1.vcf.gz test1/21.v1.vcf.gz test1/22.v1.vcf.gz test1/23.v1.vcf.gz test1/24.v1.vcf.gz test1/26.v1.vcf.gz test1/28.v1.vcf.gz test1/29.v1.vcf.gz test1/2.v1.vcf.gz test1/30.v1.vcf.gz test1/31.v1.vcf.gz test1/32.v1.vcf.gz test1/33.v1.vcf.gz test1/34.v1.vcf.gz test1/3.v1.vcf.gz test1/4.v1.vcf.gz test1/5.v1.vcf.gz test1/6.v1.vcf.gz test1/7.v1.vcf.gz test1/8.v1.vcf.gz test1/9.v1.vcf.gz; Date=Mon Sep 14 12:42:22 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr7	99757867	.	G	T	.	.	.
+chr7	99758060	.	A	G	.	.	.
+chr7	99758183	.	G	GT	.	.	.
+chr7	99758352	.	T	C	.	.	.
+chr7	99760836	.	G	A	.	.	.
+chr7	99760901	.	A	G	.	.	.
+chr7	99760956	.	T	C	.	.	.
+chr7	99762047	.	G	A	.	.	.
+chr7	99762177	.	G	A	.	.	.
+chr7	99762186	.	C	A	.	.	.
+chr7	99762206	.	G	A	.	.	.
+chr7	99763843	.	C	T	.	.	.
+chr7	99763877	.	A	G	.	.	.
+chr7	99763909	.	G	T	.	.	.
+chr7	99763925	.	T	C	.	.	.
+chr7	99764003	.	A	G	.	.	.
+chr7	99766256	.	CAT	C	.	.	.
+chr7	99766411	.	G	GT	.	.	.
+chr7	99766440	.	G	A	.	.	.
+chr7	99767298	.	T	C	.	.	.
+chr7	99768096	.	A	G	.	.	.
+chr7	99768264	.	A	G	.	.	.
+chr7	99768346	.	C	T	.	.	.
+chr7	99768360	.	A	G	.	.	.
+chr7	99768371	.	G	C	.	.	.
+chr7	99768424	.	T	A	.	.	.
+chr7	99768458	.	A	G	.	.	.
+chr7	99768470	.	G	C	.	.	.
+chr7	99768693	.	G	A	.	.	.
+chr7	99769769	.	C	G	.	.	.
+chr7	99769781	.	C	T	.	.	.
+chr7	99769804	.	C	T	.	.	.
+chr7	99769805	.	G	A	.	.	.
+chr7	99769873	.	A	C	.	.	.
+chr7	99770165	.	C	T	.	.	.
+chr7	99770166	.	G	A	.	.	.
+chr7	99770202	.	T	C	.	.	.
+chr7	99770217	.	A	T	.	.	.
+chr7	99778006	.	T	C	.	.	.
+chr7	99778079	.	C	T	.	.	.
+chr7	99784018	.	G	C	.	.	.
+chr7	99784038	.	A	G	.	.	.
+chr7	99784143	.	G	T	.	.	.
+chr7	99784237	.	G	T	.	.	.
+chr7	99784450	.	A	T	.	.	.
+chr7	99784473	.	C	T	.	.	.
+chr7	99784525	.	A	C	.	.	.
+chr7	99784711	.	T	C	.	.	.
+chr7	99784736	.	T	C	.	.	.
+chr7	99784828	.	G	C	.	.	.
+chr7	99784925	.	A	ATCACTCCAT	.	.	.

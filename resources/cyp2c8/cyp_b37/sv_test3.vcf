@@ -1,0 +1,25 @@
+##fileformat=VCFv4.2
+##contig=<ID=10,length=135534747>
+##fileDate=20200316
+##reference=reference.fa
+##phasing=true
+##INFO=<ID=COMPACT_TP,Number=.,Type=String,Description="">
+##INFO=<ID=SEQ,Number=1,Type=String,Description="Sequence to insert.">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="Type of each allele (snp, ins, del, mnp, complex)">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=SVSIZE,Number=.,Type=Integer,Description="Absolute value of SVLEN">
+##INFO=<ID=NCLUSTERS,Number=1,Type=Integer,Description="Number of clipped read clusters used for prediction">
+##INFO=<ID=NUM_MERGED_SVS,Number=1,Type=Integer,Description="Number of merged SVs.">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS for imprecise variants">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END for imprecise variants">
+##INFO=<ID=HOMSEQ,Number=.,Type=String,Description="Sequence of base pair identical homology at event breakpoints">
+##INFO=<ID=SVINSSEQ,Number=.,Type=String,Description="Sequence of insertion">
+##INFO=<ID=LEFT_SVINSSEQ,Number=.,Type=String,Description="Known left side of insertion for an insertion of unknown length">
+##INFO=<ID=RIGHT_SVINSSEQ,Number=.,Type=String,Description="Known right side of insertion for an insertion of unknown length">
+##INFO=<ID=INV3,Number=0,Type=Flag,Description="Inversion breakends open 3' of reported location">
+##INFO=<ID=INV5,Number=0,Type=Flag,Description="Inversion breakends open 5' of reported location">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+10	96796529	.	T	<DEL>	99	.	IMPRECISE;SVTYPE=DUP;SVLEN=+32727;SVSIZE=32727

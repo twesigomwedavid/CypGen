@@ -1,0 +1,58 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=7,length=159138663>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="GenoType call. ./. is called if there is no coverage at the variant site.">
+##bcftools_mergeVersion=1.10.2-91-g365d117+htslib-1.10.2-106-g9c35744
+##bcftools_mergeCommand=merge -m none -Oz -o ../databases/allele_def_var.vcf.gz test1/10.v1.vcf.gz test1/11.v1.vcf.gz test1/12.v1.vcf.gz test1/13.v1.vcf.gz test1/14.v1.vcf.gz test1/15A.v1.vcf.gz test1/15B.v1.vcf.gz test1/16A.v1.vcf.gz test1/16B.v1.vcf.gz test1/17.v1.vcf.gz test1/18A.v1.vcf.gz test1/18B.v1.vcf.gz test1/19.v1.vcf.gz test1/1A.v1.vcf.gz test1/1B.v1.vcf.gz test1/1C.v1.vcf.gz test1/1D.v1.vcf.gz test1/1E.v1.vcf.gz test1/1F.v1.vcf.gz test1/1G.v1.vcf.gz test1/1H.v1.vcf.gz test1/1J.v1.vcf.gz test1/1K.v1.vcf.gz test1/1L.v1.vcf.gz test1/1M.v1.vcf.gz test1/1N.v1.vcf.gz test1/1P.v1.vcf.gz test1/1Q.v1.vcf.gz test1/1R.v1.vcf.gz test1/1S.v1.vcf.gz test1/1T.v1.vcf.gz test1/20.v1.vcf.gz test1/21.v1.vcf.gz test1/22.v1.vcf.gz test1/23.v1.vcf.gz test1/24.v1.vcf.gz test1/26.v1.vcf.gz test1/28.v1.vcf.gz test1/29.v1.vcf.gz test1/2.v1.vcf.gz test1/30.v1.vcf.gz test1/31.v1.vcf.gz test1/32.v1.vcf.gz test1/33.v1.vcf.gz test1/34.v1.vcf.gz test1/3.v1.vcf.gz test1/4.v1.vcf.gz test1/5.v1.vcf.gz test1/6.v1.vcf.gz test1/7.v1.vcf.gz test1/8.v1.vcf.gz test1/9.v1.vcf.gz; Date=Mon Sep 14 12:41:08 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+7	99355490	.	G	T	.	.	.
+7	99355683	.	A	G	.	.	.
+7	99355806	.	G	GT	.	.	.
+7	99355975	.	T	C	.	.	.
+7	99358459	.	G	A	.	.	.
+7	99358524	.	A	G	.	.	.
+7	99358579	.	T	C	.	.	.
+7	99359670	.	G	A	.	.	.
+7	99359800	.	G	A	.	.	.
+7	99359809	.	C	A	.	.	.
+7	99359829	.	G	A	.	.	.
+7	99361466	.	C	T	.	.	.
+7	99361500	.	A	G	.	.	.
+7	99361532	.	G	T	.	.	.
+7	99361548	.	T	C	.	.	.
+7	99361626	.	A	G	.	.	.
+7	99363879	.	CAT	C	.	.	.
+7	99364034	.	G	GT	.	.	.
+7	99364063	.	G	A	.	.	.
+7	99364921	.	T	C	.	.	.
+7	99365719	.	A	G	.	.	.
+7	99365887	.	A	G	.	.	.
+7	99365969	.	C	T	.	.	.
+7	99365983	.	A	G	.	.	.
+7	99365994	.	G	C	.	.	.
+7	99366047	.	T	A	.	.	.
+7	99366081	.	A	G	.	.	.
+7	99366093	.	G	C	.	.	.
+7	99366316	.	G	A	.	.	.
+7	99367392	.	C	G	.	.	.
+7	99367404	.	C	T	.	.	.
+7	99367427	.	C	T	.	.	.
+7	99367428	.	G	A	.	.	.
+7	99367496	.	A	C	.	.	.
+7	99367788	.	C	T	.	.	.
+7	99367789	.	G	A	.	.	.
+7	99367825	.	T	C	.	.	.
+7	99367840	.	A	T	.	.	.
+7	99375629	.	T	C	.	.	.
+7	99375702	.	C	T	.	.	.
+7	99381641	.	G	C	.	.	.
+7	99381661	.	A	G	.	.	.
+7	99381766	.	G	T	.	.	.
+7	99381860	.	G	T	.	.	.
+7	99382073	.	A	T	.	.	.
+7	99382096	.	C	T	.	.	.
+7	99382148	.	A	C	.	.	.
+7	99382334	.	T	C	.	.	.
+7	99382359	.	T	C	.	.	.
+7	99382451	.	G	C	.	.	.
+7	99382548	.	A	ATCACTCCAT	.	.	.
