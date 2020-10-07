@@ -245,13 +245,13 @@ Optionally, you may set the `out_dir` to a path of choice. The default output fo
 For execution on a local machine
 
 ```bash
-nextflow run main.nf -profile standard 
+nextflow run main.nf -profile standard --build [hg38/b37/hg19] --gene [e.g. cyp2d6]
 ```
 
 For execution via a scheduler e.g. SLURM 
 
 ```bash
-nextflow run main.nf -profile slurm 
+nextflow run main.nf -profile slurm --build [hg38/b37/hg19] --gene [e.g. cyp2d6]
 ```
 
 ##### Using CRAM input
@@ -259,7 +259,7 @@ nextflow run main.nf -profile slurm
 If you are using CRAM files as input, then ensure to supply the option `--format compressed`
 
 ```bash
-nextflow run main.nf -profile [standard/slurm etc] --format compressed
+nextflow run main.nf -profile [standard/slurm etc] --format compressed --build [hg38/b37/hg19] --gene [e.g. cyp2d6]
 ```
 
 
@@ -268,13 +268,13 @@ nextflow run main.nf -profile [standard/slurm etc] --format compressed
 In case your data is aligned to `b37` or `humanG1Kv37` (have contigs without 'chr' at the start), run the pipeline using the option `--build b37` option:
 
 ```bash
-nextflow run main.nf -profile [standard/slurm etc] --build b37
+nextflow run main.nf -profile [standard/slurm etc] --build b37 --gene [e.g. cyp2d6]
 ```
 
 If instead your data is aligned to `hg19` or `GRCh37` (have most/all contigs starting with 'chr') run the pipeline using the option `--build hg19` option:
 
 ```bash
-nextflow run main.nf -profile [standard/slurm etc] --build hg19
+nextflow run main.nf -profile [standard/slurm etc] --build hg19 --gene [e.g. cyp2d6]
 ```
 
 
