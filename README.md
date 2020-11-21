@@ -1,6 +1,8 @@
 # CypGen
 Calling human cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
+Please find the most up-to-date version of `CypGen` at https://github.com/SBIMB/CypGen.git 
+
 Model gene: CYP2D6
 
 Other CYP450 genes supported: CYP2A6, CYP2B6, CYP2C19, CYP2C9, CYP2C8, CYP3A4, CYP3A5, CYP1A1, CYP1A2, CYP2E1, CYP4F2

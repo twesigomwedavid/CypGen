@@ -45,6 +45,17 @@ if snv_def_calls == None:
     print("Possible novel allele or suballele present: interpret with caution")
     sys.exit()
 
+elif snv_def_calls =='*novel/*novel':
+    print("\nResult:")
+    print("Possible novel allele or suballele present: interpret with caution")
+    sys.exit()
+
+elif snv_def_calls =='*ref/*ref':
+    print("\nResult:")
+    print("Possible novel allele or suballele present: interpret with caution")
+    sys.exit()
+
+
 best_diplos = snv_def_calls[0]
 
 print("\nCandidate alleles:")
@@ -73,7 +84,7 @@ av_cov = get_total_CN(cov_file)[1]
 gene_alleles = ""
 
 
-if snv_def_alleles != '*1B/*1B' and cn != '0':
+if snv_def_alleles != '*novel/*novel' and cn != '0':
     in_list = dup_test_init(sv_dup, av_cov)
 
 
@@ -89,32 +100,6 @@ if cn == '2':
         gene_alleles = snv_def_alleles
         print(gene_alleles)
 
-        # snv_def_alleles = snv_def_alleles.split("/")
-
-        # if snv_def_alleles[0] == '*1' or snv_def_alleles[1] == '*1':
-        #     ind_star2 = snv_def_alleles.index('*1')
-        #     ind_other = 1 - ind_star2
-
-        #     test_29 = hybrid_29_test1(cov_e1_int4, cov_int4_e9)
-        #     test_30 = hybrid_30_test1(cov_e1_int4, cov_int4_e9)
-
-
-        #     if test_29 == 'norm_var' and test_30 == 'norm_var':
-        #         gene_alleles = "/".join(snv_def_alleles)
-        #         print(gene_alleles)
-
-        #     elif test_29 == 'hyb_29':
-        #         gene_alleles = snv_def_alleles[ind_other] + "/" + "*29"
-        #         print(gene_alleles)
-
-        #     elif test_29 == 'hyb_29_2' and snv_def_alleles == "*1/*1":
-        #         gene_alleles = "*29/*29"
-        #         print(gene_alleles)
-
-
-        # else:
-        #     gene_alleles = "/".join(snv_def_alleles)
-        #     print(gene_alleles)
 
 
 

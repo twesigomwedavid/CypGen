@@ -5,7 +5,7 @@ gene_name = params.gene
 d_base = params.db_init
 res_base = params.res_init
 caller_base = params.caller_init
-
+output_folder = params.out_dir
 
 params.build='hg38'
 
@@ -352,7 +352,7 @@ ref_genome = new File("${params.ref_file}").getName()
 
 
 process call_snvs1 {
-//   maxForks 5
+   maxForks 10
 
    input:
       set val(name), file(bam) from data1
@@ -381,7 +381,7 @@ process call_snvs1 {
 
 
 process call_snvs2 {
-//   maxForks 5
+   maxForks 10
 
    input:
       set val(name), file(bam) from data2
@@ -408,7 +408,7 @@ process call_snvs2 {
 
 
 process call_sv_del {
-//   maxForks 5
+   maxForks 10
 
    input:
       set val(name), file(bam) from data3
@@ -427,7 +427,7 @@ process call_sv_del {
 }
 
 process call_sv_dup {
-//   maxForks 5
+   maxForks 10
 
    input:
       set val(name), file(bam) from data4
@@ -446,6 +446,7 @@ process call_sv_dup {
 
 
 process get_depth {
+   maxForks 10
 
    input:
       set val(name), file(bam) from data5
@@ -468,6 +469,7 @@ var_ch1.join(var_ch2).set { var_ch_joined }
 
 
 process format_snvs {
+   maxForks 10
 
    input:
       set val(name), path("${name}_var_1"), path("${name}_var_2") from var_ch_joined
@@ -488,7 +490,7 @@ process format_snvs {
 
 
 process get_core_var {
-//   maxForks 5
+   maxForks 10
    
    errorStrategy 'ignore'
    tag "${name}"   
@@ -514,7 +516,7 @@ process get_core_var {
 
 
 process analyse_1 {
-//   maxForks 5
+   maxForks 10
 
    errorStrategy 'ignore'
    tag "${name}"
@@ -536,7 +538,7 @@ process analyse_1 {
 sv_ch2.join(core_vars1).set {dup_int}
 
 process analyse_2 {
-//   maxForks 5
+   maxForks 10
 
    errorStrategy 'ignore'
    tag "${name}"
@@ -560,7 +562,7 @@ process analyse_2 {
 var_norm2.join(core_vars2).set {dip_req}
 
 process analyse_3 {
-//   maxForks 5
+   maxForks 10
 
    errorStrategy 'ignore'
    tag "${name}"
@@ -588,9 +590,9 @@ fin_files2.join(sv_ch3).set {fin_files}
 
 
 process call_stars {
-//   maxForks 5
+   maxForks 10
 
-   publishDir params.out_dir, mode: 'copy', overwrite: 'true'
+   publishDir "$output_folder/$gene_name", mode: 'copy', overwrite: 'true'
 
    errorStrategy 'ignore'
    tag "${name}"

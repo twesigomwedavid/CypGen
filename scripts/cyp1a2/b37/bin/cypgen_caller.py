@@ -33,6 +33,11 @@ print(supp_core_vars)
 snv_def_calls = cand_snv_allele_calling(database, infile, infile_full, infile_full_gt, infile_spec, cn)
 
 
+if snv_def_calls == None:
+    print("\nResult:")
+    print("Possible novel allele or suballele present: interpret with caution")
+    sys.exit()
+
 snv_cand_alleles = snv_def_calls[0]
 
 print("\nCandidate alleles:")

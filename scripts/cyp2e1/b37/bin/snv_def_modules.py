@@ -42,7 +42,7 @@ def cand_snv_allele_calling(database, infile, infile_full, infile_full_gt, infil
     if os.stat(infile).st_size == 0:
         cand_res = ['ref.v1_ref.v1']
         allele_res = "*ref/*ref"
-        return ["".join(cand_res), allele_res];
+        return ["".join(cand_res), "".join(cand_res), allele_res];
         #print("\nSupporting variants")
         #print("\n" + "".join(all_variants))
         sys.exit()
