@@ -1,7 +1,7 @@
 # CypGen
 Calling human cytochrome P450 star alleles by leveraging genome graph-based variant detection.
 
-Please find the most up-to-date version of `CypGen` at https://github.com/SBIMB/CypGen.git 
+Please find the most up-to-date version of `CypGen` at https://github.com/SBIMB/StellarPGx.git 
 
 Model gene: CYP2D6
 
